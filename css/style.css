@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: fixed;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+section {
+    height: 100%;
+    padding: 15% 30px 0 30px;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+    padding-top: 10px;
+}
+
+header nav .menu {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+header nav .menu:hover {
+    background: #ffffff;
+    cursor: pointer;
+}
+
+header ul.menu-slider {
+    width: 165px;
+    margin: 5px auto;
+    background: #a282b4;
+    border-radius: 7px;
+    list-style-type: none;
+    /*position: relative;
+    top: -230px;*/
+}
+
+header ul.menu-slider li {
+    text-transform: uppercase;
+    text-align: center;
+    color: #450468;
+    font-weight: 600;
+    padding: 4px 20px;
+    border-bottom: 1.5px solid #450468;
+    transition: all .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+header ul.menu-slider li:hover {
+    background: #ffffff;
+    border-bottom: 1.5px solid #450468;
+    cursor: pointer;
+}
+
+header ul.menu-slider li:first-child:hover {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+header ul.menu-slider li:last-child {
+    border-bottom: none;
+}
+
+header ul.menu-slider li:last-child:hover {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
+}
+
+header nav .menu span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    padding: 0;
+    margin: 0;
+    background: #450468;
+    border-radius: 12px;
+    left: 5px;
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+}
+
+header nav .menu span:nth-child(1) {
+    top: 9px;
+}
+
+header nav .menu span:nth-child(2) {
+    top: 17px;
+}
+
+header nav .menu span:nth-child(3) {
+    top: 25px;
+}
+
+header nav .menu.open span:nth-child(1) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    top: 17px;
+
+}
+
+header nav .menu.open span:nth-child(2) {
+    left: -35px;
+    opacity: 0;
+}
+
+header nav .menu.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    top: 18px;
+}
+
+header nav ul.language-bar {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+
+header nav ul.language-bar li {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+header nav ul.language-bar li.active,
+header nav ul.language-bar li:hover {
+    color: #fff;
+}
+
+.pagination-menu {
+    position: absolute;
+    right: 10px;
+    top 45%;
+    width: 50px;
+}
+
+.pagination-menu li {
+    list-style-type: none;
+}
+
+.pagination-menu span {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.pagination-menu li span.active {}
+
+.scroll-down-row {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    z-index: 99;
+}
+
+#scroll-down-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    animation: scrollDown 5s infinite;
+    -webkit-animation: scrollDown 5s infinite;
+    box-sizing: border-box;
+}
+
+#scroll-down-btn:hover {
+    cursor: pointer;
+}
+
+#scroll-down-btn span {
+    position: absolute;
+    left: 9px;
+    top: 4px;
+    bottom: 40px;
+    width: 18px;
+    height: 18px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    animation: scrollDown 5s infinite;
+    -webkit-animation: scrollDown 5s infinite;
+    box-sizing: border-box;
+}
+
+@-webkit-keyframes scrollDown {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* 
+* HOME PAGE
+*/
+
+section #heading-row {
+    margin-bottom: 25px;
+}
+
+section #precontent-row p {
+    text-align: center;
+    margin-bottom: 55px;
+    font-size: 16px;
+}
+
+section #content-row p {
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#button-row {
+    position: absolute;
+    width: 100%;
+    bottom: 35%;
+    text-align: center;
+}
+
+.scroll-down-btn {
+    position: absolute;
+    text-align: center;
+}
+
+section #heading-row img.section-icon {
+    float: right;
+}
+
+section #heading-row img.section-icon:hover {
+    transform: rotate(360deg);
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+}
+
+
+/*=== About me - Home page ===*/
+
+section#first-screen-home {
+    background: #450468;
+    color: #11dae2;
+}
+
+section#first-screen-home #content-row #profile-img {
+    /*max-width: 80%;*/
+    float: right;
+}
+
+section#first-screen-home #content-row #profile-img:hover {
+    cursor: pointer;
+    cursor: url('../img/cursor.png'), auto;
+}
+
+section#first-screen-home #button-row #about-me-more {
+    border: 2px solid #11dae2;
+    background: transparent;
+    font-size: 16px;
+    color: #11dae2;
+    padding: 10px 30px;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+section#first-screen-home #button-row #about-me-more:hover {
+    cursor: pointer;
+    background: #11dae2;
+    color: #450468;
+    font-weight: 600;
+}
+
+
+/*=== Works - Home page ===*/
+
+section.second-screen-home {
+    background: #fc6f19;
+    color: #ffffff;
+}
+
+
+
+/* Responsive Design - Bootstrap 4 media queries */
+
+
+@media (min-width: 1200px) {
+        
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+    html,
+    body {
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+
+@media (max-width: 992px) {}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+
+@media (max-width: 576px) {}
