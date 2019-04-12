@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Marko Stalmatovic - Portfolio</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body id="home-page">
 
+    <!-- Header - menu and language bar-->
     <header>
         <nav class="menu-language-bar">
             <div class="menu">
@@ -19,14 +19,9 @@
                 <span></span>
                 <span></span>
             </div>
-
             <ul class="language-bar">
-                <a href="#">
-                    <li class="srb active">SR</li>
-                </a>
-                <a href="#">
-                    <li class="eng">EN</li>
-                </a>
+                <li class="srb active"><a href="#">SR</a></li>
+                <li class="eng"><a href="#">EN</a></li>
             </ul>
         </nav>
 
@@ -39,13 +34,25 @@
         </ul>
     </header>
 
+    <!-- Social menu on left side -->
+    <div id="social-menu">
+        <span>
+            <a href="#"><img class="section-icon-img" src="img/icon/home-main-stackoverflow.svg" alt="about-me-icon" width="25"></a>
+        </span>
+        <span>
+            <a href="#"><img class="section-icon-img" src="img/icon/home-main-stackoverflow.svg" alt="about-me-icon" width="25"></a>
+        </span>
+        <span>
+            <a href="#"><img class="section-icon-img" src="img/icon/home-main-stackoverflow.svg" alt="about-me-icon" width="25"></a>
+        </span>
+    </div>
 
-
-    <div class="pagination-menu">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Navigation menu/slider -->
+    <div id="navigation-menu">
+        <a href="#home-about"><span class="first active"></span></a>
+        <a href="#home-works"><span></span></a>
+        <a href="#home-process"><span></span></a>
+        <a href="#home-contact"><span class="last"></span></a>
     </div>
 
     <div class="scroll-down-row">
@@ -54,37 +61,28 @@
         </div>
     </div>
 
-    <section id="first-screen-home">
+    <!-- About Me Section -->
+    <section class="first-screen-home" id="home-about" data-anchor="about">
         <div class="container">
-            <div class="row" id="heading-row">
-                <div class="col-lg-10 col-md-6 col-xs-6">
-                    <h1 class="page-heading">O MENI</h1>
-                </div>
-                <div class="col-lg-2 col-md-6 col-xs-6">
-                    <a href="#">
-                        <img class="section-icon" src="img/icon/about-me-main-img.svg" alt="about-me-icon" width="45" height="auto">
-                    </a>
-                </div>
+            <div class="row heading-row">
+                <h1 class="page-heading">ABOUT ME</h1>
+                <a class="section-icon" href="#">
+                    <img class="section-icon-img" src="img/icon/about-me-main-img.svg" alt="about-me-icon" width="45">
+                </a>
             </div>
-
-            <div class="row" id="precontent-row">
-                <p>Zdravo, moje ime je Marko Štalmatović i ja sam Web programer i dizajner sa sedištem u Beogradu. Imam nekoliko godina iskustva u različitim sferama dizajna i programiranja. Trenutno radim kao Web dizajner i programer u Netops korporaciji gde se moja strast prema dizajnu i programiranju spaja.</p>
+            <div class="row precontent-row">
+                <p>Hi, my name is Marko Štalmatović! I am a Web developer and designer based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged.</p>
             </div>
-
-            <div class="row" id="content-row">
-                <div class="col-lg-6">
-                    <p>Radeći kao grafički dizajner u širokom spektru vizuelnih komunikacija još u toku studija ubrzo sam se zainteresovao i za Web dizajn. Kako sam uvek voleo i pratio nove tehnologije tako je rasla želja iz detinjstva za učenjem programiranja. Poznavajući HTML&CSS, kao i bazični Javascript/jQuery zakoračio sam korak dalje. Upisao sam Master studije na katedri za Informacione tehnologije na Singidunum Univerzitetu.
-                    </p>
+            <div class="row content-row">
+                <div class="content-left">
+                    <p>Besides working as a graphic designer in a variety of companies and as freelance, during my studies, I also got interested in web design. Ever since I was a child, I was keen on new technologies, and over time my desire for learning to program grew. Knowing HTML & CSS, as well as Basic Javascript / jQuery, I took a step further. I enrolled Master studies at the Information Technology Chair at Singidunum University. In the meantime, I have been admitted to a course where I have learned a lot about web programming in PHP programming language and Drupal CMS. At the moment I am doing PhD studies on Intelligent Systems at the University of Belgrade.</p>
+                    <div class="button-row">
+                        <a href="#" class="btn" id="about-me-more">MORE ABOUT ME</a>
+                    </div>
                 </div>
-                <div class="col-lg-5 offset-lg-1">
+                <div class="content-right">
                     <img class="img-fluid" id="profile-img" src="img/about-me-me.png" alt="about-me-img">
-                </div>
-            </div>
-            <div class="row" id="button-row">
-                <div class="col-lg-12">
-                    <a href="#">
-                        <button id="about-me-more">VIŠE O MENI</button>
-                    </a>
+                    <img class="img-fluid avatar" id="profile-img-small" src="img/about-me-me-small.png" alt="about-me-small-img">
                 </div>
             </div>
             <div class="scroll-down-btn">
@@ -95,55 +93,187 @@
         </div>
     </section>
 
-
-    <section class="second-screen-home">
+    <!-- Works Section -->
+    <section class="second-screen-home" id="home-works" data-anchor="work">
         <div class="container">
-            <div class="row" id="heading-row">
-                <div class="col-lg-10 col-md-6 col-xs-6">
-                    <h1 class="page-heading">O MENI</h1>
+            <div class="row heading-row">
+                <h1 class="page-heading">WORKS</h1>
+                <a class="section-icon" href="#">
+                    <img class="section-icon-img" src="img/icon/work-main-img.svg" alt="about-me-icon" width="45">
+                </a>
+            </div>
+            <div class="row precontent-row">
+                <p>Look at my previous works and select the interested category for you. So you will be better acquainted with what I do.</p>
+            </div>
+            <div class="work">
+                <div class="row work-header">
+                    <h2 class="work-heading" id="graphic-design-heading">Graphic Design</h2>
+                    <img class="work-icon" src="img/icon/work-main-graphic-design.svg" alt="" style="margin-left: auto;">
                 </div>
-                <div class="col-lg-2 col-md-6 col-xs-6">
-                    <a href="#">
-                        <img class="section-icon" src="img/icon/about-me-main-img.svg" alt="about-me-icon" width="45" height="auto">
-                    </a>
+                <div class="row work-content">
+                    <p class="work-txt">I design professional and creative visuals for a variety of applications from digital visuals to printing. I'll create innovative design solutions, both digital and print, that will speak to your vision and help your brand standout. </p>
                 </div>
             </div>
+            <div class="work">
+                <div class="row work-header">
+                    <h2 class="work-heading">Web Design</h2>
+                    <img class="work-icon" src="img/icon/work-main-web-design.svg" alt="">
+                </div>
+                <div class="row work-content">
+                    <p class="work-txt">Creating responsive web pages from scratch with a special focus on user interaction in his digital journey, since this is of the utmost importance for a pleasant and efficient experience. I also take care of the brand of your company by designing a site according to a book of standards or by establishing new standards for the future.</p>
+                </div>
+            </div>
+            <div class="work">
+                <div class="row work-header">
+                    <h2 class="work-heading">Web Development</h2>
+                    <img class="work-icon" src="img/icon//work-main-development.svg" alt="" style="margin-left: auto;">
+                </div>
+                <div class="row work-content">
+                    <p class="work-txt">I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications. Just let me know what you need and we will find the best possible solution!</p>
+                </div>
+            </div>
+            <div class="work">
+                <div class="row work-header">
+                    <h2 class="work-heading">Intelligent Systems</h2>
+                    <img class="work-icon" src="img/icon/work-main-ai.svg" alt="">
+                </div>
+                <div class="row work-content">
+                    <p class="work-txt">Get patterns from data, making a Machine Learning models or use a Neural Networks for finding hidden knowledge. Also build a Expert Systems with AI staff or/and Fuzzy Logic.</p>
+                </div>
+            </div>
+            <div class="button-row">
+                <a href="work.html" class="btn">SELECTED WORKS</a>
+            </div>
+        </div>
+    </section>
 
-            <div class="row" id="precontent-row">
-                <p>Zdravo, moje ime je Marko Štalmatović i ja sam Web programer i dizajner sa sedištem u Beogradu. Imam nekoliko godina iskustva u različitim sferama dizajna i programiranja. Trenutno radim kao Web dizajner i programer u Netops korporaciji gde se moja strast prema dizajnu i programiranju spaja.</p>
+    <!-- Process Section -->
+    <section class="third-screen-home" id="home-process" data-anchor="process">
+        <div class="container">
+            <div class="row heading-row">
+                <h1 class="page-heading">PROCESS</h1>
+                <a class="section-icon" href="#">
+                    <img class="section-icon-img" src="img/icon/process-main-img.svg" alt="about-me-icon" width="45">
+                </a>
+            </div>
+            <div class="row precontent-row">
+                <p>Each part of the process is essentially relevant so that nothing is left to the case and doesn't skip anything. For this kind of process, needed more time to produce, but a higher quality product is obtained. The length and specificity of each production process depends on the project type.</p>
+            </div>
+            <div class="process" id="process-one">
+                <div class="row process-header">
+                    <img class="process-icon" src="img/icon/process-main-discuss-research.svg" alt="">
+                </div>
+                <div class="row process-content">
+                    <h4 class="process-heading">Discuss & Research</h4>
+                </div>
+                <div class="row process-number">
+                    <span class="process-no">1</span>
+                </div>
+            </div>
+            <p class="arrow"><i class="arrow-right"></i></p>
+            <div class="process" id="process-two">
+                <div class="row process-header">
+                    <img class="process-icon" src="img/icon/process-main-design.svg" alt="">
+                </div>
+                <div class="row process-content">
+                    <h4 class="process-heading">Design</h4>
+                </div>
+                <div class="row process-number">
+                    <span class="process-no">2</span>
+                </div>
+            </div>
+            <p class="arrow"><i class="arrow-right"></i></p>
+            <div class="process" id="process-three">
+                <div class="row process-header">
+                    <img class="process-icon" src="img/icon/process-main-development.svg" alt="">
+                </div>
+                <div class="row process-content">
+                    <h4 class="process-heading">Development</h4>
+                </div>
+                <div class="row process-number">
+                    <span class="process-no">3</span>
+                </div>
+            </div>
+            <p class="arrow"><i class="arrow-right"></i></p>
+            <div class="process" id="process-four">
+                <div class="row process-header">
+                    <img class="process-icon" src="img/icon/process-main-test-iterate.svg" alt="">
+                </div>
+                <div class="row process-content">
+                    <h4 class="process-heading">Test & Iterate</h4>
+                </div>
+                <div class="row process-number">
+                    <span class="process-no">4</span>
+                    <p class="arrow"><i class="arrow-bottom"></i></p>
+                </div>
+                <p class="arrow-iterate"><i class="arrow-top"></i></p>
+                <p class="arrow-iterate"><i class="arrow-bottom"></i></p>
             </div>
 
-            <div class="row" id="content-row">
-                <div class="col-lg-6">
-                    <p>Radeći kao grafički dizajner u širokom spektru vizuelnih komunikacija još u toku studija ubrzo sam se zainteresovao i za Web dizajn. Kako sam uvek voleo i pratio nove tehnologije tako je rasla želja iz detinjstva za učenjem programiranja. Poznavajući HTML&CSS, kao i bazični Javascript/jQuery zakoračio sam korak dalje. Upisao sam Master studije na katedri za Informacione tehnologije na Singidunum Univerzitetu.
-                    </p>
+            <div class="row last-row">
+                <div class="button-row">
+                    <a href="#" class="btn">MORE ABOUT WORK PROCESS</a>
                 </div>
-                <div class="col-lg-5 offset-lg-1">
-                    <img class="img-fluid" id="profile-img" src="img/about-me-me.png" alt="about-me-img">
+                <div class="last-process-row">
+                    <div class="process-number">
+                        <span class="process-no">5</span>
+                    </div>
+                    <div class="process-content">
+                        <h4 class="process-heading">Deliver</h4>
+                        <img class="process-icon" src="img/icon/process-main-deliver.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="third-screen-home">
-        <div class="container">
 
+    <!-- Contact Section -->
+    <section class="fourth-screen-home" id="home-contact" data-anchor="contact">
+        <div class="container">
+            <div class="row heading-row">
+                <h1 class="page-heading">CONTACT ME</h1>
+                <a class="section-icon" href="#">
+                    <img class="section-icon-img" src="img/icon/contact-main-img.svg" alt="about-me-icon" width="45">
+                </a>
+            </div>
+            <div class="row precontent-row">
+                <p>My eye for details, creativity and a desire for perfection have brought me many satisfied customers. I'm looking forward to discussing your project soon, whether it's design or web programming.</p>
+            </div>
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="row">
+                        <input name="nameSurname" placeholder="Name & Surname" type="text" required>
+                        <input name="email" placeholder="Email" type="email" required>
+                    </div>
+                    <div class="row">
+                        <select name="chooseService" required>
+                            <option class="center-option" value="" disabled selected hidden>Choose Service:</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="Photography">Photography</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <input name="subject" placeholder="Subject" type="text" required>
+                    </div>
+                    <div class="row">
+                        <textarea name="message-text" id="message-text" cols="50" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="row button-row">
+                        <input class="btn" type="submit" value="Submit">
+                    </div>
+
+                </form>
+            </div>
+            <div class="copyright">
+                <p>Make with love!</p>
+                <div class="info"> i <span class="tooltip">If you see some <img class="bug-icon" src="img/icon/bug.svg" alt="bug icon"> please contact me!</span></div>
+            </div>
         </div>
     </section>
 
-    <section class="fourth-screen-home">
-        <div class="container">
-
-        </div>
-    </section>
-
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-
 </html>
