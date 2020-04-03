@@ -1,0 +1,93 @@
+section.process-detailed-page {
+    background: #450468;
+    color: #11dae2;
+    min-height: 100vh;
+}
+
+section.process-detailed-page .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 6% 20px 80px 20px;
+}
+
+section.process-detailed-page .copyright p {
+    color: #11dae2;
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.copyright p{
+    font-size: 14px;
+}
+.copyright p span{
+    font-size: 20px;
+}
+.copyright .info {
+    position: relative;
+    margin: 20px auto 10px auto;
+    border: 1px solid #11dae2;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    font-size: 11px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.copyright .tooltip {
+    position: absolute;
+    visibility: hidden;
+    font-size: 12px;
+    width: 250px;
+    height: 25px;
+    background-color: #450468;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    bottom: 35px;
+    left: -115px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    vertical-align: middle;
+}
+.copyright .tooltip img.bug-icon {
+    display: inline-block;
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+}
+.copyright .info:hover {
+    cursor: pointer;
+    background-color: #11dae2;
+    color: #450468;
+}
+.copyright .info:hover .tooltip {
+    visibility: visible;
+}
+
+
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    section.process-detailed-page .container {
+        padding: 60px 0px 60px 0px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+}

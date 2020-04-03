@@ -1,0 +1,57 @@
+<!-- Work Single Section -->
+<div *ngFor="let item of (items | masterDetails: slugname)">
+  <section class="single-work" id="{{ item.slugname }}">
+    <div class="container">
+      <div class="row heading-row">
+        <h1 class="page-heading">{{ item.title }}</h1>
+        <a class="section-icon" [routerLink]="['/selected-works/']">
+          <img class="section-icon-img" src="../../../assets/img/icon/work-page-main-img.svg" alt="single-work-icon"
+            width="45">
+        </a>
+      </div>
+      <!-- Single work heading -->
+      <div class="row work-single">
+        <div class="row work-header">
+          <h3 class="work-heading">{{ item.subtitle }}</h3>
+          <p class="work-txt">{{ item.shortDesc }}</p>
+          <span class="work-tags">Tags: {{ item.tags }};</span>
+        </div>
+        <div class="work-img">
+          <img class="img-fluid work-preview-img" [src]="item.headingImg" alt="{{item.title}}">
+        </div>
+      </div>
+      <!-- Slick Carousel -->
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">  
+          <div *ngFor="let slide of slides" ngxSlickItem class="slide">
+            <img class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%; height: auto;">
+          </div>
+      </ngx-slick-carousel>
+
+      <!-- Single work images -->
+      <!-- <div class="row preview-single" >
+        <img class="img-fluid work-preview-img {{item.title}}" [src]="item.img" alt="{{item.title}}" width="100%" height="auto">
+      </div> -->
+
+      <!-- Txt about company -->
+      <div class="row txt-single">
+        <p>" {{ item.txt }} "</p>
+      </div>
+      <!-- Next&Previous Btn's -->
+      <div class="row next-prev">
+        <a class="arrow previous" *ngIf="prevEnable" (click)="goPrevious()"><i class="arrow-left">&#8592; </i> previous
+          project </a>
+        <a class="arrow next" *ngIf="nextEnable" (click)="goNext()"> next project <i class="arrow-right">&#8594;</i></a>
+      </div>
+      <!-- Back Btn -->
+      <div class="row back">
+        <a class="back-btn" (click)="goBack()">&#8630; Go Back</a>
+      </div>
+      <!-- Footer -->
+      <div class="copyright">
+        <p>Make it with <span>️️♥️</span></p>
+        <div class="info"> &#8505; <span class="tooltip">If you see some <img class="bug-icon"
+              src="../../assets/img/icon/bug.svg" alt="bug icon"> please contact me!</span></div>
+      </div>
+    </div>
+  </section>
+</div>

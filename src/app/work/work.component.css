@@ -1,0 +1,245 @@
+section.work-list-page {
+    background: #450468;
+    color: #11dae2;
+    min-height: auto;
+}
+
+section.work-list-page .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 6% 20px 80px 20px;
+}
+
+section.work-list-page .container .button-row {
+    width: 100%;
+}
+
+section.work-list-page .container .filter{
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+section.work-list-page .container .filter p{
+    margin-bottom: 10px;
+}
+
+section.work-list-page .container .button-row #work-type-filter {
+    width: 180px;
+    border: 2px solid #11dae2;
+    color: #11dae2;
+    background-color: #450468;
+}
+
+section.work-list-page .container .button-row #work-type-filter:hover {
+    font-weight: 400;
+    color: #450468;
+    background-color: #11dae2;
+}
+
+section.work-list-page .container .button-row #work-type-filter option {
+    margin-top: 15px;
+    color: #11dae2;
+    background-color: #450468;
+}
+
+section.work-list-page .container a.single-work-link {
+    flex-basis: 48.8%;
+    text-decoration: none;
+}
+
+section.work-list-page .button-row #load-more {
+    margin: 10px auto 50px auto;
+    border-color: #11dae2;
+    color: #11dae2;
+}
+
+section.work-list-page .button-row #load-more:hover {
+    background-color: #11dae2;
+    color: #450468;
+}
+
+/* Single Work Styles */
+.work-preview-component{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+a.single-work-link {
+    flex-basis: 48.8%;
+    text-decoration: none;
+}
+
+a.single-work-link:nth-child(even){
+    margin-left: auto;
+}
+
+.work-preview {
+    border: 2px solid transparent;
+    color: #ffffff;
+    padding: 25px 35px 0 35px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border-color: #00ffff;
+    transition: all .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -o-transition: .4s ease-in-out;
+    min-height: 400px;
+}
+
+.work-preview.graphic-design {
+    background-color: rgba(0, 220, 220, 0.5);
+}
+
+.work-preview.web-design {
+    background-color: rgba(165, 130, 180, 0.5);
+}
+
+.work-preview.web-development {
+    background-color: rgba(160, 30, 55, 0.5);
+}
+
+.work-preview.intelligent-system {
+    background-color: rgba(220, 120, 0, 0.5);
+}
+
+.work-preview.photography {
+    background-color: rgba(34, 130, 180, 0.5);
+}
+
+.work-preview:hover {
+    background-color: rgba(0, 220, 220, 1);
+    color: #450468;
+}
+
+.work-preview .work-header {
+    text-align: left;
+}
+
+.work-preview .work-header .work-heading:before {
+    border-bottom: 2px solid red;
+    width: 20px;
+    display: inline-block;
+}
+
+.work-preview .work-header .work-txt {
+    text-transform: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 1;
+}
+
+.work-preview .work-img {
+    text-align: center;
+    position: relative;
+}
+
+.work-preview .work-img img.work-preview-img {
+    margin: 10px auto;
+    max-width: 330px;
+    height: auto;
+    position: absolute;
+    top: 45px;
+    left: 15%;
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.copyright p{
+    font-size: 14px;
+}
+.copyright p span{
+    font-size: 20px;
+}
+.copyright .info {
+    position: relative;
+    margin: 20px auto 10px auto;
+    border: 1px solid #11dae2;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    font-size: 11px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.copyright .tooltip {
+    position: absolute;
+    visibility: hidden;
+    font-size: 12px;
+    width: 250px;
+    height: 25px;
+    background-color: #450468;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    bottom: 35px;
+    left: -115px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    vertical-align: middle;
+}
+.copyright .tooltip img.bug-icon {
+    display: inline-block;
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+}
+.copyright .info:hover {
+    cursor: pointer;
+    background-color: #11dae2;
+    color: #450468;
+}
+.copyright .info:hover .tooltip {
+    visibility: visible;
+}
+
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    section.work-list-page .container {
+        padding: 60px 0px;
+    }
+    .work-preview-component{
+        width: 100%;
+        justify-content: center;
+    }
+    section.work-list-page .container a.single-work-link{
+        width: 100%;
+        flex-basis: auto;
+    }
+    section.work-list-page .container a.single-work-link .work-preview{
+        min-height: 300px;
+        overflow: hidden;
+    }
+    section.work-list-page .container a.single-work-link .work-img .work-preview-img{
+        max-width: 300px;
+        position: unset;
+        margin-top: 20px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+
+    section.work-list-page .container .button-row #work-type-filter{
+        width: 100%;
+        text-align-last: center;
+    }
+
+}

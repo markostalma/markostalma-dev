@@ -1,0 +1,535 @@
+/* About CV Single Page */
+
+section.about-cv-page {
+  background: #450468;
+  color: #11dae2;
+  min-height: auto;
+}
+
+section.about-cv-page .container {
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 6% 20px 80px 20px;
+}
+
+section.about-cv-page .content-row p {
+  text-transform: inherit;
+}
+
+section.about-cv-page .content-row img.avatar {
+  display: none;
+}
+
+section.about-cv-page .content-row .content-left {
+  flex: 1;
+  padding-right: 50px
+}
+
+section.about-cv-page .content-row .content-right {
+  flex: 0.8;
+}
+
+section.about-cv-page .cv-content-right {
+  margin-left: auto;
+}
+
+section.about-cv-page .cv-heading {
+  text-align: center;
+}
+
+section.about-cv-page .first-cv,
+section.about-cv-page .second-cv,
+section.about-cv-page .third-cv {
+  width: 100%;
+  display: flex;
+}
+
+section.about-cv-page #software-skill {
+  border-top-right-radius: 40px;
+}
+
+section.about-cv-page #libraries {
+  border-top-left-radius: 40px;
+  margin-left: auto;
+}
+
+section.about-cv-page .cv {
+  flex-basis: 48%;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #450468;
+  margin-bottom: 40px;
+  padding: 20px 50px;
+}
+
+section.about-cv-page .cv h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+
+section.about-cv-page .cv ul {
+  list-style-type: none;
+}
+
+section.about-cv-page .cv#software-skill ul li,
+section.about-cv-page .cv#libraries ul li {
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+section.about-cv-page .cv#software-skill ul li span,
+section.about-cv-page .cv#libraries ul li span {
+  float: right;
+  width: 15px;
+  height: 15px;
+  background-color: #450468;
+  border: 2px solid #450468;
+  border-radius: 50%;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+section.about-cv-page .cv#software-skill ul li span.null,
+section.about-cv-page .cv#libraries ul li span.null {
+  background-color: transparent;
+}
+
+section.about-cv-page .cv .other {
+  margin-top: 20px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid #6d6d6d;
+}
+
+section.about-cv-page .cv .other h3 {
+  margin-bottom: 15px;
+}
+
+section.about-cv-page .second-cv .cv-content-left,
+section.about-cv-page .second-cv .cv-content-right {
+  flex-basis: 48%;
+}
+
+section.about-cv-page .second-cv img {
+  height: 40px;
+  width: auto;
+  opacity: 0.7;
+}
+
+section.about-cv-page .third-cv img,
+section.about-cv-page .last-cv img {
+  opacity: 0.5;
+}
+
+.education-list,
+.awards-list,
+.experience-list {
+  border-left: 2px solid #450468;
+  padding-left: 15px;
+}
+
+.education-list ul,
+.awards-list ul,
+.experience-list ul {
+  margin: 5px 0 15px 0;
+}
+
+.experience-list li:not(.job-position):not(.job-duration){
+  margin-bottom: 26px;
+} 
+
+.experience-list li:last-child,
+.experience-list ul:last-child{
+  margin-bottom: 0!important;
+}
+
+.education-list li span:not(.circle):not(.faculty),
+.education-list .degree-type,
+.awards-list li span:not(.circle):not(.event-name),
+.awards-list .award-type,
+.experience-list li span:not(.circle):not(.company),
+.experience-list .job-duration {
+  opacity: 0.8;
+}
+
+.education-list li span.faculty,
+.education-list li.degree,
+.awards-list li span.event-name,
+.experience-list li span.company,
+.experience-list li.job-position{
+  font-weight: 600;
+}
+
+.education-list li ul,
+.awards-list li ul,
+.experience-list li ul {
+  margin-left: 30px;
+}
+
+section.about-cv-page .second-cv span.circle {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #450468;
+  border-radius: 50%;
+  background-color: #c8b4d2;
+  display: inline-block;
+  position: relative;
+  left: -24px;
+}
+
+.education-list ul li::before,
+.awards-list ul::before,
+.experience-list ul::before {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background-color: red;
+}
+
+section.about-cv-page .third-cv .cv-content-left,
+section.about-cv-page .third-cv .cv-content-right {
+  display: flex;
+  align-items: center;
+}
+
+section.about-cv-page .third-cv .cv,
+section.about-cv-page .last-cv .cv {
+  background-color: #874da7;
+  color: #ffffff;
+  padding: 20px;
+}
+
+section.about-cv-page .third-cv .cv-content-left,
+section.about-cv-page .third-cv .cv-content-right {
+  flex-basis: 48%;
+}
+
+section.about-cv-page .third-cv .cv .cv-heading {
+  flex: 0.3;
+  text-align: center;
+}
+
+section.about-cv-page .third-cv .cv .cv-content {
+  flex: 0.7;
+  margin-left: 30px;
+}
+
+section.about-cv-page .third-cv .cv-content-left .cv-content ul li {
+  margin-bottom: 15px;
+}
+
+section.about-cv-page .third-cv .cv .cv-content ul li:last-child {
+  margin-bottom: 0;
+}
+
+section.about-cv-page .third-cv .cv .cv-content ul span:not(.language-bar) {
+  float: right;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-left: 10px;
+  box-sizing: border-box;
+}
+
+section.about-cv-page .third-cv .cv-content-right ul li:not(img) {
+  line-height: 1;
+}
+
+section.about-cv-page .third-cv .cv-content-right ul li img {
+  height: 35px;
+  width: auto;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: all .2s ease-out;
+}
+
+section.about-cv-page .third-cv .cv-content-right ul li img:hover{
+  opacity: 1;
+}
+
+section.about-cv-page .third-cv .cv .cv-content ul span.null {
+  background-color: transparent;
+}
+
+section.about-cv-page .last-cv {
+  width: 100%;
+}
+
+section.about-cv-page .last-cv .cv {
+  display: flex;
+  align-items: center;
+}
+
+section.about-cv-page .last-cv .cv-content-left {
+  flex: 0.2;
+}
+
+section.about-cv-page .last-cv .cv-content-right {
+  flex: 0.8;
+}
+
+section.about-cv-page .last-cv .cv-content-right img {
+  margin-right: 30px;
+  height: 65px;
+  transition: all .2s ease-out;
+}
+
+section.about-cv-page .last-cv .cv-content-right img:hover {
+  opacity: 1;
+}
+
+.download-button-row {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0 50px 0;
+}
+
+.download-button-row #download-cv {
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 2px solid #11dae2;
+  color: #11dae2;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+
+.download-button-row #download-cv:hover {
+  background: #11dae2;
+  color: #450468;
+  font-weight: 600;
+}
+
+/* Copyright */
+.copyright {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 14px;
+}
+
+.copyright p span {
+  font-size: 20px;
+}
+
+.copyright .info {
+  position: relative;
+  margin: 20px auto 10px auto;
+  border: 1px solid #11dae2;
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  padding: 2px;
+  font-size: 11px;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+.copyright .tooltip {
+  position: absolute;
+  visibility: hidden;
+  font-size: 12px;
+  width: 250px;
+  height: 25px;
+  background-color: #450468;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 7px;
+  bottom: 35px;
+  left: -115px;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  vertical-align: middle;
+}
+
+.copyright .tooltip img.bug-icon {
+  display: inline-block;
+  width: 17px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.copyright .info:hover {
+  cursor: pointer;
+  background-color: #11dae2;
+  color: #450468;
+}
+
+.copyright .info:hover .tooltip {
+  visibility: visible;
+}
+
+/* Medium-Large devices (tablets, 992px and down) */
+@media (max-width: 992px) {
+  section.about-cv-page .content-row .content-left {
+    flex: 100%;
+    padding-right: 0px;
+    margin-bottom: 30px;
+  }
+
+  section.about-cv-page .cv {
+    padding: 20px;
+  }
+
+  section.about-cv-page .cv#software-skill ul li span,
+  section.about-cv-page .cv#libraries ul li span,
+  section.about-cv-page .third-cv .cv .cv-content ul li span {
+    margin-left: 7px;
+  }
+
+  .education-list,
+  .awards-list,
+  .experience-list {
+    padding-left: 0px;
+  }
+
+  section.about-cv-page .second-cv span.circle {
+    left: -9px;
+  }
+
+  .education-list li span.faculty > span,
+  .awards-list li span.event-name > span {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  section.about-cv-page .container {
+    padding: 60px 0px 60px 0px;
+  }
+
+  section.about-cv-page .first-cv,
+  section.about-cv-page .second-cv,
+  section.about-cv-page .third-cv {
+    width: 100%;
+    display: inline-block;
+  }
+
+  section.about-cv-page .cv {
+    padding: 15px;
+  }
+
+  section.about-cv-page #software-skill {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+
+  section.about-cv-page #libraries {
+    border-top-left-radius: 0px;
+  }
+
+  section.about-cv-page .cv#software-skill ul li span,
+  section.about-cv-page .cv#libraries ul li span {
+    margin-left: 5px;
+  }
+  
+  section.about-cv-page .desktop-aligner{
+    display: none;
+  }
+
+  section.about-cv-page .third-cv .cv-content-left,
+  section.about-cv-page .third-cv .cv-content-right,
+  section.about-cv-page .last-cv .cv {
+    flex-direction: column;
+  }
+
+  section.about-cv-page .last-cv .cv .cv-content-left {
+    margin-bottom: 20px;
+  }
+
+  section.about-cv-page .last-cv .cv .cv-content-right {
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section.about-cv-page .last-cv .cv .cv-content-right img {
+    margin: 10px;
+    height: 50px;
+  }
+
+  section.about-cv-page .third-cv .cv .cv-content {
+    flex: 1;
+    margin-left: 0px;
+  }
+
+  section.about-cv-page .cv h3 {
+    font-size: 18px;
+  }
+
+  section.about-cv-page .third-cv .cv .language-bar {
+    margin-right: 30px;
+  }
+
+  section.about-cv-page .cv .other {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+
+  section.about-cv-page .cv .other h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {}
+
+/* Extra Small devices (landscape phones, 480px and down) */
+@media (max-width: 480px) {
+  section.about-cv-page .second-cv img {
+    height: 30px;
+  }
+
+  section.about-cv-page .third-cv .cv-heading .img-fluid,
+  section.about-cv-page .last-cv .cv-heading .img-fluid {
+    height: 35px;
+  }
+
+  section.about-cv-page .cv#software-skill ul li,
+  section.about-cv-page .cv#libraries ul li,
+  section.about-cv-page .third-cv .cv .cv-content ul li {
+    padding-bottom: 8px;
+    font-size: 15px;
+  }
+
+  section.about-cv-page #education .education-list li,
+  section.about-cv-page #awards .awards-list li section.about-cv-page #experience .experience-list li {
+    font-size: 15px;
+  }
+
+  section.about-cv-page .cv#software-skill ul li span,
+  section.about-cv-page .cv#libraries ul li span,
+  section.about-cv-page .third-cv .cv .cv-content ul li span {
+    margin-left: 3px;
+    width: 12px;
+    height: 12px;
+    margin-top: 5px;
+  }
+
+  section.about-cv-page .third-cv .cv .cv-content ul li span {
+    margin-top: 3px;
+  }
+
+  section.about-cv-page .third-cv .cv .language-bar {
+    margin-right: 20px;
+  }
+}

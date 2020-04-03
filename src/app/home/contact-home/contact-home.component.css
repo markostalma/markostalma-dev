@@ -1,0 +1,296 @@
+/*=== Home Page - Contact Section ===*/
+
+section.fourth-screen-home {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    color: #450468;
+    outline: 10px solid #450468;
+    outline-offset: -10px;
+    background: #ffffff;
+}
+
+section.fourth-screen-home .container {
+    flex-wrap: wrap;
+}
+
+section.fourth-screen-home .container .submited-messages{
+    width: 100%;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    text-align: center;
+    margin: 10px auto;
+}
+
+section.fourth-screen-home .container .submited-messages span{
+    background-color: #ffffff;
+    border: 2px solid #450468;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+section.fourth-screen-home .container .contact-form {
+    width: 100%;
+}
+
+section.fourth-screen-home .container form .inputs{
+    flex: 0.5; 
+    height: 65px;
+}
+
+section.fourth-screen-home .container form .form-error{
+    font-size: 12px;
+    font-style: italic;
+    padding: 5px 0 10px 0;
+}
+
+section.fourth-screen-home .container form #input-name,
+section.fourth-screen-home .container form #select-service{
+    margin-right: 10px;
+}
+
+section.fourth-screen-home .container form #input-email,
+section.fourth-screen-home .container form #input-subject{
+    margin-left: 10px;
+}
+
+section.fourth-screen-home .container form .inputs input,
+section.fourth-screen-home .container form select,
+section.fourth-screen-home .container form textarea {
+    width: 100%;
+    border: 2px solid #450468;
+    padding-left: 10px;
+    height: 40px;
+    font-size: 16px;
+    color: #450468;
+    text-align: center;
+}
+
+section.fourth-screen-home .container form input:focus,
+section.fourth-screen-home .container form select:focus,
+section.fourth-screen-home .container form textarea:focus {
+    border-radius: 7px;
+}
+
+section.fourth-screen-home .container form select {
+    text-indent: 40%;
+    background: #ffffff;
+}
+
+section.fourth-screen-home .container form #textarea-message{
+    height: 160px;
+}
+
+section.fourth-screen-home .container form textarea {
+    width: 100%;
+    resize: none;
+    height: auto;
+    font-size: 16px;
+    padding: 20px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Mozilla Firefox 19+ */
+
+::-moz-placeholder {
+    line-height: 80px;
+    color: #450468;
+    text-align: center;
+}
+
+/* Webkit */
+
+::-webkit-input-placeholder {
+    line-height: 80px;
+    color: #450468;
+    text-align: center;
+}
+
+/* IE */
+
+:-ms-input-placeholder {
+    line-height: 80px;
+    color: #450468;
+    text-align: center;
+}
+
+.button-row {
+    display: block;
+    text-align: center;
+}
+
+.button-row input[type="submit"] {
+    border: 2px solid #450468;
+    margin: 25px auto 55px auto;
+    width: 25%;
+    background-color: transparent;
+    color: #450468;
+}
+
+.button-row input[type="submit"]:disabled:hover{
+    font-weight: 400;
+    cursor: not-allowed;
+}
+
+.button-row input[type="submit"]:enabled:hover {
+    cursor: pointer;
+    background-color: #450468;
+    color: #ffffff;
+}
+
+
+/* Mozila Firefox Browser  */
+@supports (-moz-appearance:none) {
+    input::-moz-placeholder{
+        line-height: 35px;
+        color: #450468;
+        opacity: 1;
+    }
+
+    textarea::placeholder{
+        line-height: 105px;
+        color: #450468;
+        opacity: 1;
+    }
+
+    section.fourth-screen-home .container form select{
+        text-indent: 0;
+    }
+}
+
+/* Microsoft Edge Browser  */
+@supports (-ms-ime-align:auto) {
+
+    section.fourth-screen-home .container form select{
+        text-indent: 0;
+        text-align: center;
+        text-align-last:center;
+        -ms-text-align-last: center;
+    }
+
+    textarea::-ms-input-placeholder{
+        padding-top: 50px;
+        line-height: 205px;
+    }
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.copyright p{
+    font-size: 14px;
+}
+.copyright p span{
+    font-size: 20px;
+}
+.copyright .info {
+    position: relative;
+    margin: 20px auto 10px auto;
+    border: 1px solid #450468;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    font-size: 11px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.copyright .tooltip {
+    position: absolute;
+    visibility: hidden;
+    font-size: 12px;
+    width: 250px;
+    height: 25px;
+    background-color: #450468;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    bottom: 35px;
+    left: -115px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    vertical-align: middle;
+}
+.copyright .tooltip img.bug-icon {
+    display: inline-block;
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+}
+.copyright .info:hover {
+    cursor: pointer;
+    background-color: #450468;
+    color: #ffffff;
+}
+.copyright .info:hover .tooltip {
+    visibility: visible;
+}
+
+
+/* Medium devices (landscape phones, 768px and down) */
+@media (max-width: 768px) {
+    section.fourth-screen-home .container{
+        padding: 30px 0;
+    }
+    .button-row input[type="submit"] {
+        width: 35%;
+    }
+}
+
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+
+    section.fourth-screen-home .container .submited-messages{
+        top: auto;
+        bottom: 115px;
+    }
+
+    section.fourth-screen-home .container form .inputs{
+        flex-basis: 100%;
+        height: 62px;
+    }
+
+    section.fourth-screen-home .container form .form-error{
+        font-size: 11px;
+        font-style: italic;
+        padding: 3px 0;
+    }
+
+    section.fourth-screen-home .container form input:not([type='submit']),
+    section.fourth-screen-home .container form select,
+    section.fourth-screen-home .container form textarea {
+        flex-basis: 100%;
+        padding-right: 20px;
+    }
+
+    section.fourth-screen-home .container form #input-name,
+    section.fourth-screen-home .container form #select-service,
+    section.fourth-screen-home .container form #input-email,
+    section.fourth-screen-home .container form #input-subject{
+        margin: 0;
+    }
+
+    section.fourth-screen-home .container form select{
+        padding-left: 25px;
+        text-indent: 0;
+        width: 100%;
+        text-align-last: center;
+    }
+}

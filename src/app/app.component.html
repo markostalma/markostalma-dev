@@ -1,0 +1,25 @@
+<!-- Header - menu and language bar-->
+<header>
+  <nav class="menu-language-bar">
+    <div class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="language-bar">
+      <li class="srb"><a>SR <span class="language-tooltip">Site on Serbian Coming Soon</span></a></li>
+      <li class="eng active"><a>EN</a></li>
+    </ul>
+  </nav>
+
+  <ul class="menu-slider" style="display: none;">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/']"><a>Home</a></li>
+    <li routerLinkActive="active" [routerLink]="['about-me']"><a>About Me</a></li>
+    <li routerLinkActive="active" [routerLink]="['selected-works']"><a>Selected Works</a></li>
+    <li routerLinkActive="active" [routerLink]="['work-process']"><a>Work Process</a></li>
+    <li [routerLink]="['/']" fragment="home-contact"><a>Contact</a></li>
+  </ul>
+</header>
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet (activate)="onActivateRouting($event)" #outlet="outlet"></router-outlet>
+</div>

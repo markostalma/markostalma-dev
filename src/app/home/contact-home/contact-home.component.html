@@ -1,0 +1,75 @@
+<!-- Contact Section -->
+<section class="fourth-screen-home" id="home-contact" data-anchor="contact">
+  <div class="container">
+    <div class="submited-messages">
+      <span (click)="closeMessage()" *ngIf="submitedValid">Message Sent Sucessfull!</span>  <!-- *ngIf="submitedValid" -->
+      <span (click)="closeMessage()" *ngIf="submitedInvalid">Error, please try again!</span>
+    </div>
+    <div class="row heading-row">
+      <h1 class="page-heading">CONTACT ME</h1>
+      <a class="section-icon" href="#">
+        <img class="section-icon-img" src="../../assets/img/icon/contact-main-img.svg" alt="contact-icon" width="45">
+      </a>
+    </div>
+    <div class="row precontent-row">
+      <p>My eye for details, creativity and a desire for perfection have brought me many satisfied customers. I'm
+        looking forward to discussing your project soon, whether it's design or web programming.</p>
+    </div>
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)" id="contact-form">
+        <div class="row">
+          <div class="inputs" id="input-name">
+            <input formControlName="nameSurname" id="nameSurname" placeholder="Name & Surname" required>
+            <div *ngFor="let nameValidation of form_validation_messages.nameSurname">
+              <div class="form-error" *ngIf="contactForm.get('nameSurname').hasError(nameValidation.type) && (contactForm.get('nameSurname').touched || contactForm.get('nameSurname').dirty)">{{ nameValidation.message }}</div>
+            </div>
+          </div>
+          <div class="inputs" id="input-email">
+            <input formControlName="email" placeholder="Email" type="email" required>
+            <div *ngFor="let emailValidation of form_validation_messages.email">
+              <div class="form-error" *ngIf="contactForm.get('email').hasError(emailValidation.type) && (contactForm.get('email').touched || contactForm.get('email').dirty)">{{ emailValidation.message }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="inputs" id="select-service">
+            <select [(ngModel)]="serviceSelectDefault" formControlName="service" id="service-select" name="service" required>
+              <option class="center-option" [ngValue]="null" disabled selected hidden>Choose Service:</option>
+              <option value="Graphic Design">Graphic Design</option>
+              <option value="Web Design">Web Design</option>
+              <option value="Web Development">Web Development</option>
+              <option value="Photography">Intelligent Systems</option>
+              <option value="Other">Other</option>
+            </select>
+            <div *ngFor="let selectValidation of form_validation_messages.service">
+              <div class="form-error" *ngIf="contactForm.get('service').hasError(selectValidation.type) && (contactForm.get('service').touched || contactForm.get('service').dirty)">{{ selectValidation.message }}</div>
+            </div>
+          </div>
+          <div class="inputs" id="input-subject">
+            <input formControlName="subject" name="subject" placeholder="Subject" required>
+            <div *ngFor="let subjectValidation of form_validation_messages.subject">
+              <div class="form-error" *ngIf="contactForm.get('subject').hasError(subjectValidation.type) && (contactForm.get('subject').touched || contactForm.get('subject').dirty)">{{ subjectValidation.message }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="textarea-message">
+          <textarea formControlName="textarea" name="textarea" id="message-text" cols="60" rows="5"
+            placeholder="Your Message" required></textarea>
+            <div *ngFor="let validation of form_validation_messages.textarea">
+              <div class="form-error" *ngIf="contactForm.get('textarea').hasError(validation.type) && (contactForm.get('textarea').touched || contactForm.get('textarea').dirty)">{{ validation.message }}</div>
+            </div>
+        </div>
+        <div class="row button-row">
+          <input type="submit" class="btn" [disabled]="!contactForm.valid" value="Submit">
+        </div>
+      </form>
+    </div>
+    <!-- Footer -->
+    <div class="copyright">
+      <p>Make it with ️️<span>♥️</span></p>
+      <div class="info"> &#8505; <span class="tooltip">If you see some <img class="bug-icon"
+            src="../../assets/img/icon/bug.svg" alt="bug icon"> please contact me!</span></div>
+    </div>
+  </div>
+</section>

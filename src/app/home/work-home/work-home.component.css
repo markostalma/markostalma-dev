@@ -1,0 +1,128 @@
+section.second-screen-home {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #fc6f19;
+    color: #ffffff;
+    outline: 10px solid #450468;
+    outline-offset: -10px;
+}
+
+section.second-screen-home .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section.second-screen-home .container .work {
+    flex-basis: 48%;
+    margin: 10px;
+    padding: 10px 25px;
+    border: 2px solid #ffffff;
+    border-radius: 0px;
+    box-sizing: border-box;
+    transition: all .2s ease-out;
+}
+
+section.second-screen-home .container .work-heading {
+    flex: 2;
+}
+
+section.second-screen-home .container .work-icon {
+    flex: 0.5;
+}
+
+section.second-screen-home .container .work:hover{
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+section.second-screen-home .container .button-row {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+section.second-screen-home .container .button-row .btn {
+    text-align: center;
+}
+
+section.second-screen-home .container .button-row .btn:hover {
+    background: #ffffff;
+    color: #fc6f19;
+}
+
+section.second-screen-home .container .work-header {
+    margin-bottom: 15px;
+}
+
+section.second-screen-home .container .work:nth-last-child(2) .work-header .work-heading,
+section.second-screen-home .container .work:nth-last-child(4) .work-header .work-heading {
+    order: 2;
+}
+
+section.second-screen-home .container .work-heading {
+    text-align: center;
+    line-height: 1;
+}
+
+section.second-screen-home .container .work-icon {
+    width: auto;
+    height: 45px;
+    color: #ffffff;
+}
+
+section.second-screen-home .container .work-txt {
+    text-align: center;
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    section.second-screen-home .container{
+        padding: 30px 0px 35px 0px;
+    }
+    section.second-screen-home .container .heading-row{
+        margin-bottom: 5px;
+    }
+    section.second-screen-home .container .work{
+        flex-basis: 46%;
+    }
+}
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+    section.second-screen-home .container .work{
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+    }
+    section .precontent-row{
+        margin-bottom: 25px;
+    }
+    section.second-screen-home .container .button-row{
+        margin-top: 25px;
+    }
+    section.second-screen-home .container .work-header {
+        margin-bottom: 10px;
+    }
+    section.second-screen-home .container .work-heading{
+        line-height: 2.1;
+    }
+    section.second-screen-home .container .work-icon{
+        width: 35px;
+    }
+}
+
+/* Extra Small devices (landscape phones, 480px and down) */
+@media (max-width: 480px) {
+    section.second-screen-home .container .work-header {
+        margin-bottom: 0px;
+    }
+    section.second-screen-home .container .work-icon,
+    section.second-screen-home .container .work-heading{
+        flex-basis: 100%;
+    }
+    section.second-screen-home .container .work-content .work-txt{
+        margin-bottom: 5px;
+    }
+
+}

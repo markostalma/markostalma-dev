@@ -1,0 +1,61 @@
+ <!-- Navigation menu/slider -->
+ <div id="navigation-menu">
+   <a><span class="first active"></span></a>
+ </div>
+
+ <!-- 404 Error Section -->
+ <section class="error-404-page" id="error-404-page">
+   <div class="container">
+     <div class="row heading-row">
+       <h1 class="page-heading">PAGE NOT FOUND <span id="error-id-desktop">Error #404</span></h1>
+       <a class="section-icon">
+         <img class="section-icon-img" src="../../assets/img/icon/error-main-img.svg" alt="error-icon" width="45">
+       </a>
+     </div>
+     <div class="row precontent-row">
+       <p>The page you are looking for may have been deleted or never existed. Please check the web address you entered.
+       </p>
+     </div>
+     <div class="error-container">
+       <div class="error" id="error-404">
+         <div class="error-header">
+           <img class="work-icon" src="../../assets/img/icon/error404--sad-img.svg" alt="error-404">
+         </div>
+         <div class="error-content">
+           <p class="work-txt">There was an error, this page does not exist.</p>
+         </div>
+         <div class="button-row">
+           <a [routerLink]="['/']" class="btn">BACK TO HOME</a>
+         </div>
+       </div>
+       <div class="error" id="error-menu">
+         <div class="error-header">
+           <h2 class="error-heading">MENU</h2>
+         </div>
+         <div class="button-row">
+           <a [routerLink]="['/about-me']" class="btn btn-with-img">ABOUT ME<img class="section-icon-img"
+               src="../../assets/img/icon/error-about-me-main-img.svg" alt="about-me-icon" width="30"></a>
+         </div>
+         <div class="button-row">
+           <a [routerLink]="['/selected-works']" class="btn btn-with-img">SELECTED WORK <img class="section-icon-img"
+               src="../../assets/img/icon/error-work-main-img.svg" alt="selected-work-icon" width="30"></a>
+         </div>
+         <div class="button-row">
+           <a [routerLink]="['/work-process']" class="btn btn-with-img">WORK PROCESS <img class="section-icon-img"
+               src="../../assets/img/icon/error-process-main-img.svg" alt="work-process-icon" width="30"></a>
+         </div>
+         <div class="button-row">
+           <a [routerLink]="['/']" fragment="home-contact" class="btn btn-with-img">CONTACT <img
+               class="section-icon-img" src="../../assets/img/icon/error-contact-main-img.svg" alt="contact-icon"
+               width="30"></a>
+         </div>
+       </div>
+     </div>
+     <!-- Footer -->
+     <div class="copyright">
+       <p>Make with ️️♥️ love!</p>
+       <div class="info"> &#8505; <span class="tooltip">If you see some <img class="bug-icon"
+             src="../../assets/img/icon/bug.svg" alt="bug icon"> please contact me!</span></div>
+     </div>
+   </div>
+ </section>

@@ -1,0 +1,228 @@
+/*=== Home Page - Process Section ===*/
+
+section.third-screen-home {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: #450468;
+  color: #11dae2;
+  outline: 10px solid #fc6f19;
+  outline-offset: -10px;
+}
+
+section.third-screen-home .container {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+section.third-screen-home .container .process {
+  flex-basis: 21%;
+  border: 3px solid #fc6f19;
+  border-radius: 100%;
+  margin: 10px 0 35px 10px;
+  padding: 25px 25px 0 25px;
+  box-sizing: border-box;
+  min-height: 220px;
+  position: relative;
+}
+
+section.third-screen-home .container .process-header .process-icon {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+section.third-screen-home .container .process-content h4.process-heading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+section.third-screen-home .container .process:not(#process-one) .process-content h4.process-heading {
+  margin-top: 10px;
+}
+
+section.third-screen-home .container .process-number {
+  justify-content: center;
+  text-align: center;
+}
+
+section.third-screen-home .container .process-number .process-no {
+  border: 2px solid #fc6f19;
+  color: #fc6f19;
+  border-radius: 100%;
+  width: 25px;
+  font-size: 16px;
+  position: absolute;
+  bottom: -1px;
+}
+
+p.arrow i,
+p.arrow-iterate i {
+  display: inline-block;
+  border: 1px solid #fc6f19;
+  border-width: 0 3px 3px 0;
+  border-radius: 25%;
+  padding: 5px;
+}
+
+i.arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+i.arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+i.arrow-bottom {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.arrow-mobile {
+  display: none;
+}
+
+.process-number i.arrow-bottom {
+  position: absolute;
+  bottom: -25px;
+  margin-left: -5px;
+}
+
+.arrow-iterate i.arrow-top {
+  transform: rotate(230deg);
+  -webkit-transform: rotate(230deg);
+  position: absolute;
+  top: 50%;
+  left: -8px;
+}
+
+.arrow-iterate i.arrow-bottom {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+}
+
+section.third-screen-home .container .last-row {
+  width: 100%;
+}
+
+section.third-screen-home .container .last-row .button-row,
+section.third-screen-home .container .last-row .last-process-row {
+  flex-basis: 50%;
+}
+
+section.third-screen-home .container .last-row .button-row {
+  margin-top: 45px;
+}
+
+section.third-screen-home .container .last-process-row {
+  display: flex;
+  border: 3px solid #fc6f19;
+  border-radius: 7px;
+  align-items: center;
+  padding: 15px;
+}
+
+section.third-screen-home .container .last-process-row .process-number {
+  margin-right: 150px;
+}
+
+section.third-screen-home .container .last-process-row .process-number .process-no {
+  border: 2px solid #fc6f19;
+  border-radius: 0%;
+  padding: 8px 10px 10px 10px;
+  width: 25px;
+  height: 25px;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+}
+
+section.third-screen-home .container .last-process-row .process-content {
+  display: flex;
+}
+
+section.third-screen-home .container .last-process-row .process-heading {
+  margin: 25px 0 !important;
+}
+
+section.third-screen-home .container .last-process-row img.process-icon {
+  margin: 5px 0 0 15px;
+  height: 60px;
+  width: auto;
+}
+
+section.third-screen-home .container .button-row .btn {
+  border-color: #11dae2;
+  color: #11dae2;
+}
+
+section.third-screen-home .container .button-row .btn:hover {
+  background: #11dae2;
+  color: #450468;
+}
+
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  section.third-screen-home .container {
+    padding: 30px 0;
+  }
+
+  section.third-screen-home .container .process {
+    flex-basis: 100%;
+    max-width: 330px;
+    min-height: 330px;
+    margin: 30px auto;
+  }
+
+  .arrow-desktop {
+    display: none;
+  }
+
+  .arrow-mobile {
+    display: block;
+  }
+
+  section.third-screen-home .container .last-row {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  section.third-screen-home .container .last-row .last-process-row {
+    flex-basis: 100%;
+  }
+
+  section.third-screen-home .container .last-process-row .process-number {
+    margin-right: 15%;
+  }
+
+  section.third-screen-home .container .last-row .button-row {
+    text-align: center;
+    flex-basis: 100%;
+  }
+}
+
+
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  section.third-screen-home .container .process {
+    max-width: 220px;
+    min-height: 220px;
+    margin: 15px auto;
+  }
+}
+
+/* Extra-Small devices (old phones, 300px and down) */
+@media (max-width: 300px) {
+  section.third-screen-home .container .process {
+    max-width: 180px;
+    min-height: 180px;
+  }
+}

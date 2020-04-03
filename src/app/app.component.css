@@ -1,0 +1,12 @@
+.language-bar li{
+    margin-right: 5px;
+}
+
+.language-bar li:not(.active){
+    opacity: 0.6;
+    transition: 0.3s all ease;
+}
+
+.language-bar li:not(.active):hover{
+    opacity: 1;
+}

@@ -1,0 +1,181 @@
+/* 404 Page */
+
+section.error-404-page {
+    background: #fc6f19;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+section.error-404-page .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 6% 20px 80px 20px;
+}
+
+section.error-404-page .error {
+    flex-basis: 48%;
+    margin: 10px;
+    padding: 25px;
+    border: 2px solid #ffffff;
+    text-align: center;
+}
+section.error-404-page .button-row a:hover{
+    background-color: #ffffff;
+    color: #fc6f19;
+}
+
+section.error-404-page #error-404 img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+section.error-404-page #error-404 .error-content{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.error-container{
+    display: flex;
+    width: 100%;
+}
+
+section.error-404-page #error-404 .button-row{
+    margin: 35px 0 15px 0;
+}
+
+section.error-404-page #error-menu {
+    text-align: center;
+}
+
+section.error-404-page #error-menu .button-row{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section.error-404-page #error-menu .button-row .btn{
+    padding: 10px;
+}
+
+section.error-404-page #error-menu .button-row a.btn{
+    display: block;
+    width: 220px;
+    margin: 0 auto;
+    line-height: 2;
+}
+
+section.error-404-page #error-menu .button-row img{
+    vertical-align: middle;
+    margin-left: 15px;
+    opacity: 1;
+    transition: all 0.2s ease-in;
+    
+}
+
+section.error-404-page .button-row a:hover img{
+    opacity: 0;
+    display: none;
+}
+
+/* Copyright */
+.copyright {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.copyright p{
+    font-size: 14px;
+}
+.copyright p span{
+    font-size: 20px;
+}
+.copyright .info {
+    position: relative;
+    margin: 20px auto 10px auto;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    width: 20px;
+    padding: 2px;
+    font-size: 11px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+.copyright .tooltip {
+    position: absolute;
+    visibility: hidden;
+    font-size: 12px;
+    width: 250px;
+    height: 25px;
+    background-color: #fc6f19;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 7px;
+    bottom: 35px;
+    left: -115px;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    vertical-align: middle;
+}
+.copyright .tooltip img.bug-icon {
+    display: inline-block;
+    width: 17px;
+    height: auto;
+    vertical-align: middle;
+}
+.copyright .info:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #fc6f19;
+}
+.copyright .info:hover .tooltip {
+    visibility: visible;
+}
+
+/* Only Large devices (tablets, 992px and up) */
+@media (min-width: 992px) {
+    section.error-404-page #error-404{
+        padding-top: 8%;
+    }
+}
+
+/* Large devices (tablets, 992px and down) */
+@media (max-width: 992px) {
+    section.error-404-page .error{
+        flex-basis: 100%;
+    }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+    .error-container{
+        flex-wrap: wrap;
+    }
+    section.error-404-page .container{
+        padding: 60px 0px 60px 0px;
+    }
+    #error-id-desktop{
+        display: none;
+    }
+}
+
+/* Small devices (tablets, 576px and down) */
+@media (max-width: 576px) {}
+
+/* Extra Small devices (tablets, 480px and down) */
+@media (max-width: 480px) {
+    section.error-404-page #error-404 img {
+        width: 85%;
+        margin: 10px auto;
+    }
+}

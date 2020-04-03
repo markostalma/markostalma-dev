@@ -1,0 +1,58 @@
+<!-- Work Section -->
+<section class="work-list-page" id="work-list-page">
+  <div class="container">
+    <div class="row heading-row">
+      <h1 class="page-heading">SELECTED WORKS</h1>
+      <a class="section-icon">
+        <img class="section-icon-img" src="../../assets/img/icon/work-page-main-img.svg" alt="selected-works-icon" width="45">
+      </a>
+    </div>
+    <div class="row precontent-row">
+      <p>This is some of the selected works from different categories. You can choose one for more details or filter by
+        category.
+      </p>
+    </div>
+    <!-- Categories Filter -->
+    <div class="row filter">
+      <p>SELECT WORK TYPE:</p>
+      <div class="button-row precontent-row">
+        <select class="btn" id="work-type-filter" (change)="filterType($event.target.value); changeFilter()"
+          name="workTypeFilter" required>
+          <option value="0" selected>All</option>
+          <option value="graphic-design">Graphic Design</option>
+          <option value="web-design">Web Design</option>
+          <option value="web-development">Web Development</option>
+          <option value="inteligent-system">Intelligent System</option>
+          <option value="photography">Photography</option>
+        </select>
+      </div>
+    </div>
+    <!-- Single Work START  -->
+    <div class="work-preview-component">
+      <a [routerLink]="'/selected-work/' + item.slugname" class="single-work-link" *ngFor="let item of items">
+        <div class="work-preview {{ item.type }}" id="item-{{ item.id }}">
+          <div class="row work-header">
+            <h3 class="work-heading">{{ item.title }}</h3>
+          </div>
+          <div class="row work-desc">
+            <p class="work-txt">{{ item.shortDesc }}</p>
+          </div>
+          <div class="work-img">
+            <img class="work-preview-img" src="{{ item.headingImg }}" alt="{{item.title}}">
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- Single Work END  -->
+    <!-- Load More Btn -->
+    <div class="button-row">
+      <div class="btn" (click)="loadMore()" id="load-more">Load More</div>
+    </div>
+    <!-- Footer -->
+    <div class="copyright">
+      <p>Make it with <span>️️♥️</span></p>
+      <div class="info"> &#8505; <span class="tooltip">If you see some <img class="bug-icon"
+            src="../../assets/img/icon/bug.svg" alt="bug icon"> please contact me!</span></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,448 @@
+{
+    "indexPageEng": {
+        "about": {
+            "heading": "ABOUT ME",
+            "mainIcon": "../../../assets/img/icon/about-me-main.svg",
+            "precontentTxt": "Hi, my name is Marko Štalmatović! I am a Web developer and designer based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged.",
+            "contentTxt": {
+                "left": "Besides working as a graphic designer in a variety of companies and as freelance, during my studies, I also got interested in web design. Ever since I was a child, I was keen on new technologies, and over time my desire for learning to program grew. Knowing HTML & CSS, as well as Basic Javascript / jQuery, I took a step further. I enrolled Master studies at the Information Technology Chair at Singidunum University. In the meantime, I have been admitted to a course where I have learned a lot about web programming in PHP programming language and Drupal CMS. At the moment I am doing PhD studies on Intelligent Systems at the University of Belgrade.",
+                "right": {
+                    "imgBig": "../../../assets/img/about-me-me.png",
+                    "imgSmall": "../../../assets/img/about-me-me-small.png"
+                }
+            },
+            "btn": "More About Me"
+        },
+
+        "work": {
+            "heading": "WORK",
+            "mainIcon": "../../../assets/img/icon/about-me-main.svg",
+            "precontentTxt": "Look at my previous works and select the interested category for you. So you will be better acquainted with what I do.",
+            "btn": "Selected Works",
+            "graphic": {
+                "title": "Graphic Design",
+                "icon": "../../../assets/img/icon/work-main-graphic-design.svg",
+                "txt": "I design professional and creative visuals for a variety of applications from digital visuals to printing. I'll create innovative design solutions, both digital and print, that will speak to your vision and help your brand standout."
+            },
+            "webDesign": {
+                "title": "Web Design",
+                "icon": "../../../assets/img/icon/work-main-web-design.svg",
+                "txt": "Creating responsive web pages from scratch with a special focus on user interaction in his digital journey, since this is of the utmost importance for a pleasant and efficient experience. I also take care of the brand of your company by designing a site according to a book of standards or by establishing new standards for the future."
+            },
+            "webDev": {
+                "title": "Web Development",
+                "icon": "../../../assets/img/icon/work-main-development.svg",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications. Just let me know what you need and we will find the best possible solution!"
+            },
+            "is": {
+                "title": "Intelligent Systems",
+                "icon": "../../../assets/img/icon/work-main-ai.svg",
+                "txt": "Get patterns from data, making a Machine Learning models or use a Neural Networks for finding hidden knowledge. Also build a Expert Systems with AI staff or/and/like Fuzzy Logic."
+            }
+        },
+
+        "process": {
+            "heading": "PROCESS",
+            "mainIcon": "../../../assets/img/icon/process-me-main-img.svg",
+            "precontentTxt": "Each part of the process is essentially relevant so that nothing is left to the case and doesn't skip anything. For this kind of process, needed more time to produce, but a higher quality product is obtained. The length and specificity of each production process depends on the project type.",
+            "btn": "More About Work Process",
+            "process1": {
+                "title": "Discuss & Research",
+                "icon": "../../../assets/img/icon/process-main-discuss-research.svg",
+                "num": "1"
+            },
+            "process2": {
+                "title": "Design",
+                "icon": "../../../assets/img/icon/process-main-design.svg",
+                "num": "2"
+            },
+            "process3": {
+                "title": "Development",
+                "icon": "../../../assets/img/icon/process-main-development.svg",
+                "num": "3"
+            },
+            "process4": {
+                "title": "Test & Iterate",
+                "icon": "../../../assets/img/icon/process-main-test-iterate.svg",
+                "num": "4"
+            },
+            "process5": {
+                "title": "Deliver",
+                "icon": "../../../assets/img/icon/process-main-test-deliver.svg",
+                "num": "5"
+            }
+        },
+
+        "contact": {
+            "heading": "CONTACT",
+            "mainIcon": "../../../assets/img/icon/about-me-main.svg",
+            "precontentTxt": "My eye for details, creativity and a desire for perfection have brought me many satisfied customers. I'm looking forward to discussing your project soon, whether it's design or web programming.",
+            "form": {
+                "name": "Name & Surname",
+                "email": "Email",
+                "chooseService": {
+                    "choose": "Choose Service",
+                    "graphic": "Graphic Design",
+                    "web": "Web Design",
+                    "dev": "Web Development",
+                    "is": "Intelligent Systems / AI",
+                    "other": "Other"
+                },
+                "subject": "Subject",
+                "textField": "Your Message",
+                "submit": "Submit"
+            }
+        }
+    },
+
+    "aboutPageEng": {
+        "heading": "ABOUT ME",
+        "mainIcon": "../../../assets/img/icon/about-me-main.svg",
+        "precontentTxt": "Hi, my name is Marko Štalmatović! I am a Web developer and designer based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged.",
+        "contentTxt": {
+            "left": "Besides working as a graphic designer in a variety of companies and as freelance, during my studies, I also got interested in web design. Ever since I was a child, I was keen on new technologies, and over time my desire for learning to program grew. Knowing HTML & CSS, as well as Basic Javascript / jQuery, I took a step further. I enrolled Master studies at the Information Technology Chair at Singidunum University. In the meantime, I have been admitted to a course where I have learned a lot about web programming in PHP programming language and Drupal CMS. At the moment I am doing PhD studies on Intelligent Systems at the University of Belgrade.",
+            "right": {
+                "imgBig": "../../../assets/img/about-me-me.png",
+                "imgSmall": "../../../assets/img/about-me-me-small.png"
+            }
+        },
+        "software": {
+            "title": "Software - Programming Skill",
+            "adobePho": "Adobe Photoshop",
+            "adobrIll": "Adobe Illustrator",
+            "htmlCss": "HTML5 & CSS3",
+            "javascript": "Javascript",
+            "ts": "Typescript",
+            "python": "Python",
+            "php": "PHP",
+            "java": "JAVA",
+            "other": {
+                "title": "Other Stuff",
+                "rowOne": "BitBucket/SourceTree, Git, NPM",
+                "rowTwwo": "Command Line, WordPress"
+            },
+            "also": {
+                "title": "Also I know something about",
+                "rowOne": "MySQL, AJAX, MongoDB, Express, Drupal, WHMCS",
+                "rowTwwo": "TCP/IP, Google Web Designer, Adobe Affter Effect"
+            }
+        },
+        "libraries": {
+            "title": "Libraries and Frameworks",
+            "jquery": "jQuery",
+            "bootstrap": "Bootstrap",
+            "lessSass": "Less / Sass",
+            "angularJs": "AngularJS",
+            "angular2": "Angular 2+",
+            "nodeJs": "NodeJS",
+            "VueJs": "VueJS",
+            "other": "možda data science biblioteke"
+        },
+        "education": {
+            "title": "Education",
+            "icon": "../../../assets/img/icon/about-me-education-main.svg",
+            "faculty1": {
+                "name": "University Union, Belgrade",
+                "year": "(2005-2009)",
+                "degree": "Bachelor Degree:",
+                "course": "Graphic Design"
+            },
+            "faculty2": {
+                "name": "University Singidunum, Belgrade",
+                "year": "(2005-2009)",
+                "degree": "Master Degree:",
+                "course": "Computer Science"
+            },
+            "faculty3": {
+                "name": "University Of Belgrade, Belgrade",
+                "year": "(2017-2020)",
+                "degree": "PhD Degree:",
+                "course": "Intelligent Systems"
+            }
+        },
+        "workExperience": {
+            "title": "Work Experience",
+            "icon": "../../../assets/img/icon/",
+            "job1": {
+                "company": "University Union, Belgrade",
+                "position": "Bachelor Degree:",
+                "duration": "Graphic Design"
+            },
+            "job2": {
+                "company": "University Singidunum, Belgrade",
+                "position": "Master Degree:",
+                "duration": "Computer Science"
+            },
+            "job3": {
+                "company": "University Of Belgrade, Belgrade",
+                "position": "PhD Degree:",
+                "duration": "Intelligent Systems"
+            },
+            "job4": {
+                "company": "University Of Belgrade, Belgrade",
+                "position": "PhD Degree:",
+                "duration": "Intelligent Systems"
+            },
+            "job5": {
+                "company": "University Of Belgrade, Belgrade",
+                "position": "PhD Degree:",
+                "duration": "Intelligent Systems"
+            },
+            "job6": {
+                "company": "University Of Belgrade, Belgrade",
+                "position": "PhD Degree:",
+                "duration": "Intelligent Systems"
+            }
+        },
+        "awards": {
+            "title": "Work Experience",
+            "icon": "../../../assets/img/icon/",
+            "award1": {
+                "name": "University Of Belgrade, Belgrade",
+                "type": "PhD Degree:"
+            },
+            "award2": {
+                "name": "University Of Belgrade, Belgrade",
+                "type": "PhD Degree:"
+            }
+        },
+        "language": {
+            "title": "",
+            "icon": "",
+            "serbian": "Serbian",
+            "englis": "English",
+            "german": "German",
+            "russian": "Russian"
+        },
+        "contact": {
+            "title": "Work Experience",
+            "icon": "../../../assets/img/icon/",
+            "location": {
+                "icon": "../../../assets/img/icon/",
+                "txt": "Belgrade, Serbia"
+            },
+            "email": {
+                "icon": "../../../assets/img/icon/",
+                "txt": "mstalmatovic@gmail.com"
+            },
+            "phone": {
+                "icon": "../../../assets/img/icon/",
+                "txt": "+381 (60) 060 20 40"
+            },
+            "skype": {
+                "icon": "../../../assets/img/icon/",
+                "txt": "marko.stalma"
+            },
+            "website": {
+                "icon": "../../../assets/img/icon/",
+                "txt": "markostalma.ninja"
+            }
+        },
+        "interest": {
+            "title": "Interest",
+            "code": "../../../assets/img/icon/",
+            "motocycle": "../../../assets/img/icon/",
+            "kickbox": "../../../assets/img/icon/",
+            "football": "../../../assets/img/icon/",
+            "read": "../../../assets/img/icon/",
+            "travel": "../../../assets/img/icon/"
+        }
+    },
+
+    "workPageEng": {
+        "title": "Make with love!",
+        "icon": "If you see some",
+        "filter": {
+            "title": "Work type",
+            "dropdown1": "All",
+            "dropdown2": "Graphic Design",
+            "dropdown3": "Web Design",
+            "dropdown4": "Web Development",
+            "dropdown5": "Intelligent Systems",
+            "dropdown6": "Photography"
+        },
+        "bugTxt2": "Make with love!",
+        "workPreview": [
+            {   
+                "id": "1",
+                "type": "graphic-design",
+                "name": "Work One",
+                "slugname": "work-one",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "id": "2",
+                "type": "graphic-design",
+                "name": "Work Two",
+                "slugname": "work-two",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "id": "3",
+                "type": "web-design",
+                "name": "Work Three",
+                "slugname": "work-three",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "id": "4",
+                "type": "web-development",
+                "name": "Work Four",
+                "slugname": "work-four",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png"
+            },
+            {
+                "id": "5",
+                "type": "inteligent-system",
+                "name": "Work Five",
+                "slugname": "work-five",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png"
+            },
+            {
+                "id": "6",
+                "type": "photography",
+                "name": "Work Six",
+                "slugname": "work-six",
+                "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+                "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+                "img": "/assets/img/work-preview-img.png"
+            }
+        ],
+        "workSingle": [
+            {
+                "type": "graphic-design",
+                "name": "Work One",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "type": "graphic-design",
+                "name": "Work Two",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "type": "web-design",
+                "name": "Work Three",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "type": "web-development",
+                "name": "Work Four",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "type": "inteligent-system",
+                "name": "Work Five",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "http://localhost:4200/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            },
+            {
+                "type": "photography",
+                "name": "Work Six",
+                "txt": "I'm reviving sites and applications with the latest technologies!",
+                "mainImg": "/assets/img/work-preview-img.png",
+                "otherImg": {
+                    "img1": "/assets/img/single-work-preview-img.png",
+                    "img2": "/assets/img/single-work-preview-img.png",
+                    "img3": "/assets/img/single-work-preview-img.png"
+                }
+            }
+        ]
+    },
+    
+    "processPageEng": {
+        "title": "PROCESS PAGE IS IN PROCESS, PLEASE CHECK AGAIN LATER",
+        "icon": "If you see some",
+        "precontentTxt": "Each part of the process is essentially relevant so that nothing is left to the case and doesn't skip anything. For this kind of process, needed more time to produce, but a higher quality product is obtained. The length and specificity of each production process depends on the project type.",
+        "mainImg": ""
+    },
+
+    "errorPageEng": {
+        "title": "Make with love!",
+        "icon": "If you see some",
+        "contentLeft": {
+            "titleImg": "",
+            "txt": "I design professional and creative visuals for a variety of applications from digital visuals to printing. I'll create innovative design solutions, both digital and print, that will speak to your vision and help your brand standout.",
+            "btn": "Back To Home"
+        },
+        "contentright": {
+            "title": "Menu",
+            "btn1": {
+                "title": "About",
+                "icon": ""
+            },
+            "btn2": {
+                "title": "Work",
+                "icon": ""
+            },
+            "btn3": {
+                "title": "Process",
+                "icon": ""
+            },
+            "btn4": {
+                "title": "Contact",
+                "icon": ""
+            }
+        }
+    },
+
+    "copyright": {
+        "make": "Make with love!",
+        "bugTxt1": "If you see some",
+        "bugIcon": " please contact me!",
+        "bugTxt2": "Make with love!"
+    }
+}

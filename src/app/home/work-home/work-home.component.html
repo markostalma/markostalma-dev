@@ -1,0 +1,53 @@
+<!-- Works Section -->
+<section class="second-screen-home" id="home-works" data-anchor="work">
+  <div class="container">
+      <div class="row heading-row">
+          <h1 class="page-heading">WORKS</h1>
+          <a class="section-icon" [routerLink]="['/selected-works/']">
+              <img class="section-icon-img" src="../../assets/img/icon/work-main-img.svg" alt="selected-works-icon" width="45">
+          </a>
+      </div>
+      <div class="row precontent-row">
+          <p>Look at my previous works and select the interested category for you. So you will be better acquainted with what I do.</p>
+      </div>
+      <div class="work" [routerLink]="['/selected-works/']">
+          <div class="row work-header">
+              <h2 class="work-heading" id="graphic-design-heading">Graphic Design</h2>
+              <img class="work-icon" src="../../assets/img/icon/work-main-graphic-design.svg" alt="graphic design icon" style="margin-left: auto;">
+          </div>
+          <div class="row work-content">
+              <p class="work-txt">I design professional and creative visuals for a variety of applications from digital visuals to printing. I'll create innovative design solutions, both digital and print, that will speak to your vision and help your brand standout. </p>
+          </div>
+      </div>
+      <div class="work" [routerLink]="['/selected-works/']">
+          <div class="row work-header">
+              <h2 class="work-heading">Web Design</h2>
+              <img class="work-icon" src="../../assets/img/icon/work-main-web-design.svg" alt="web design icon">
+          </div>
+          <div class="row work-content">
+              <p class="work-txt">Creating responsive web pages from scratch with a special focus on user interaction in his digital journey, since this is of the utmost importance for a pleasant and efficient experience. I also take care of the brand of your company by designing a site according to a book of standards or by establishing new standards for the future.</p>
+          </div>
+      </div>
+      <div class="work" [routerLink]="['/selected-works/']">
+          <div class="row work-header">
+              <h2 class="work-heading">Web Development</h2>
+              <img class="work-icon" src="../../assets/img/icon/work-main-development.svg" alt="web development icon" style="margin-left: auto;">
+          </div>
+          <div class="row work-content">
+              <p class="work-txt">I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications. Just let me know what you need and we will find the best possible solution!</p>
+          </div>
+      </div>
+      <div class="work" [routerLink]="['/selected-works/']">
+          <div class="row work-header">
+              <h2 class="work-heading">Intelligent Systems</h2>
+              <img class="work-icon" src="../../assets/img/icon/work-main-ai.svg" alt="intelligent systems icon">
+          </div>
+          <div class="row work-content">
+              <p class="work-txt">Get patterns from data, making a Machine Learning models or use a Neural Networks for finding hidden knowledge. Also build a Expert Systems with AI staff or/and Fuzzy Logic.</p>
+          </div>
+      </div>
+      <div class="button-row">
+          <a [routerLink]="['/selected-works/']" class="btn">SELECTED WORKS</a>
+      </div>
+  </div>
+</section>

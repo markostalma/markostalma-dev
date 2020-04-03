@@ -1,0 +1,71 @@
+[
+    {   
+        "id": "1",
+        "type": "graphic-design",
+        "name": "Work One",
+        "slugname": "work-one",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png",
+        "otherImg": {
+            "img1": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img2": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img3": "http://localhost:4200/assets/img/single-work-preview-img.png"
+        }
+    },
+    {
+        "id": "2",
+        "type": "graphic-design",
+        "name": "Work Two",
+        "slugname": "work-two",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png",
+        "otherImg": {
+            "img1": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img2": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img3": "http://localhost:4200/assets/img/single-work-preview-img.png"
+        }
+    },
+    {
+        "id": "3",
+        "type": "web-design",
+        "name": "Work Three",
+        "slugname": "work-three",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png",
+        "otherImg": {
+            "img1": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img2": "http://localhost:4200/assets/img/single-work-preview-img.png",
+            "img3": "http://localhost:4200/assets/img/single-work-preview-img.png"
+        }
+    },
+    {
+        "id": "4",
+        "type": "web-development",
+        "name": "Work Four",
+        "slugname": "work-four",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png"
+    },
+    {
+        "id": "5",
+        "type": "inteligent-system",
+        "name": "Work Five",
+        "slugname": "work-five",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png"
+    },
+    {
+        "id": "6",
+        "type": "photography",
+        "name": "Work Six",
+        "slugname": "work-six",
+        "txt": "I'm reviving sites and applications with the latest technologies with the tendency to always try new technologies and their capabilities. Besides building new, I am also reviving websites and applications.",
+        "short-desc": "Lorem Ipsum based in Belgrade, Serbia. Have several years of experience in various spheres of design and programming. I am currently working as a Web Designer and Developer in the Netops corporation where is my passion for design and programming is merged. ",
+        "img": "http://localhost:4200/assets/img/work-preview-img.png"
+    }
+]
