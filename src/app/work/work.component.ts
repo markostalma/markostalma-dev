@@ -38,41 +38,41 @@ export class WorkComponent implements OnInit {
   // Load More Works
   loadMore(){
     this.counter = (this.counter + 2);
-    if(this.selectedType === "0" && this.counter <= 18){
+    if(this.selectedType === "0" && this.counter <= 20){
       this.items = this.dataService.loadItems().slice(0, this.counter);
     } else{
       this.items = this.dataService.loadItems().filter((workType) => workType.type == this.selectedType).slice(0, this.counter);
     }
 
-    if(this.counter == 18){ // || this.counter > this.items.length
+    if(this.counter == 20){ // || this.counter > this.items.length
       $('#load-more').css('display', 'none');
     } else{
       $('#load-more').css('display', 'block');
     }
 
-    // console.log('Filter on Load more: ' + this.selectedType);
-    // console.log('Counter Load More: ' + this.counter);
-    // console.log('Length on load more: ' + this.items.length);
+    console.log('Filter on Load more: ' + this.selectedType);
+    console.log('Counter Load More: ' + this.counter);
+    console.log('Length on load more: ' + this.items.length);
   }
   
   // Filter Works Categories
   changeFilter() {
     this.counter = 4;
-    if (this.selectedType === "0" && this.counter <= 18){
+    if (this.selectedType === "0" && this.counter <= 20){
       this.items = this.dataService.loadItems().slice(0, 4);
     } else{
       this.items = this.dataService.loadItems().filter((workType) => workType.type == this.selectedType).slice(0, this.counter);
     }
 
-    if(this.counter == 18){ // || this.counter > this.items.length
+    if(this.counter == 20){ // || this.counter > this.items.length
       $('#load-more').css('display', 'none');
     } else{
       $('#load-more').css('display', 'block');
     }
 
-    // console.log('Type on filter: ' + this.selectedType);
-    // console.log('Counter on filter: ' + this.counter);
-    // console.log('Length on filter: ' + this.items.length);
+    console.log('Type on filter: ' + this.selectedType);
+    console.log('Counter on filter: ' + this.counter);
+    console.log('Length on filter: ' + this.items.length);
   }
 
   ngOnInit(): void {

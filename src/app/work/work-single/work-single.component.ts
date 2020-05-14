@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, OnDestroy, OnChanges, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, OnChanges, DoCheck, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Items } from '../../data/works';
@@ -13,7 +13,7 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   providers: [ DataService ]
 })
 
-export class WorkSingleComponent implements OnInit, OnDestroy, OnChanges {
+export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   items: Items[];
   private item: any = [];
   sliderItem: any = [];
@@ -34,6 +34,8 @@ export class WorkSingleComponent implements OnInit, OnDestroy, OnChanges {
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {  
+    $('.slick-list').css({ height: "auto" });
+    this.configCarousel();
     this.items = dataService.loadItems();
     this.loadItems();
     this.loadSliderImage();
@@ -59,20 +61,18 @@ export class WorkSingleComponent implements OnInit, OnDestroy, OnChanges {
   
 
   configCarousel(){
-    this.activeRoute.queryParams.subscribe(queryParams => {
-      this.slideConfig = {
-        "slidesToShow": 1, 
-        "slidesToScroll": 1,
-        "lazyLoad": "ondemand",
-        "autoplay": true,
-        "adaptiveHeight": true,
-        "fade": true,
-        "arrows": false,
-        "dots": true,
-        "dotsClass": "slick-dots custom-dots",
-        "infinite": true 
-      }
-    });
+    this.slideConfig = {
+      "slidesToShow": 1, 
+      "slidesToScroll": 1,
+      "lazyLoad": "ondemand",
+      "autoplay": true,
+      "adaptiveHeight": true,
+      "fade": true,
+      "arrows": false,
+      "dots": true,
+      "dotsClass": "slick-dots custom-dots",
+      "infinite": true 
+    }
   }
 
 
@@ -116,12 +116,15 @@ export class WorkSingleComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnInit() {
-    this.configCarousel();
     this.document.body.classList.remove('about-page', 'work-page', 'home-page', 'process-page', 'error-page');
     this.document.body.classList.add('single-work-page', this.item.type);
+    $('.slick-list').css({ height: "auto" });
   }
 
-  ngOnChanges(){
+  ngDoCheck(){
+    this.configCarousel();
+    $('.slick-list').css({ height: "auto" });
+    
   }
 
   ngOnDestroy() {

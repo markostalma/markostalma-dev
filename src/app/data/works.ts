@@ -283,13 +283,43 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 18,
+        "type": "inteligent-system",
+        "title": "Data Science project",
+        "subtitle": "Some visualization ",
+        "slugname": "data-science",
+        "tags": "data science, python, visualization, Jupyter notebook ",
+        "shortDesc": "Exploatory visualization with python libraries like numpy, pandas and other from MySQL database ",
+        "txt": "Images of that work",
+        "headingImg": "../assets/img/work-preview-img.png",
+        "link": "",
+        "otherImg": [
+            {"img": "../assets/img/single-work-preview-img.png"}
+        ]
+    },
+    {
+        "id": 19,
+        "type": "inteligent-system",
+        "title": "Empty for now",
+        "subtitle": "Empty for now ",
+        "slugname": "data-science",
+        "tags": "data science, python, visualization, Jupyter notebook ",
+        "shortDesc": "Exploatory visualization with python libraries like numpy, pandas and other from MySQL database ",
+        "txt": "Images of that work",
+        "headingImg": "../assets/img/work-preview-img.png",
+        "link": "",
+        "otherImg": [
+            {"img": "../assets/img/single-work-preview-img.png"}
+        ]
+    },
+    {
+        "id": 20,
         "type": "photography",
         "title": "Amateur Photography",
         "subtitle": "Personal photography",
         "slugname": "photography",
         "tags": "photography, amateur equipment",
         "shortDesc": "Some of my photos from student days before social networks.",
-        "txt": "",
+        "txt": "Some of my photos from student days with Canon amateur photo camera.",
         "headingImg": "../assets/img/works/photography-heading.png",
         "link": "",
         "otherImg": [
