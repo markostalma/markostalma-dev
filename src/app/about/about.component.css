@@ -303,76 +303,30 @@ section.about-cv-page .last-cv .cv-content-right img:hover {
   font-weight: 600;
 }
 
-/* Copyright */
-.copyright {
-  width: 100%;
-  position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.copyright p {
-  font-size: 14px;
-}
-
-.copyright p span {
-  font-size: 20px;
-}
-
+/* Footer tooltip and Copyright */
 .copyright .info {
-  position: relative;
-  margin: 20px auto 10px auto;
   border: 1px solid #11dae2;
-  border-radius: 50%;
-  display: inline-block;
-  width: 20px;
-  padding: 2px;
-  font-size: 11px;
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
 }
 
 .copyright .tooltip {
-  position: absolute;
-  visibility: hidden;
-  font-size: 12px;
-  width: 250px;
-  height: 25px;
   background-color: #450468;
   color: #ffffff;
-  text-align: center;
-  padding: 5px;
-  border-radius: 7px;
-  bottom: 35px;
-  left: -115px;
-  transition: all .2s ease-in-out;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  vertical-align: middle;
-}
-
-.copyright .tooltip img.bug-icon {
-  display: inline-block;
-  width: 17px;
-  height: auto;
-  vertical-align: middle;
 }
 
 .copyright .info:hover {
-  cursor: pointer;
   background-color: #11dae2;
   color: #450468;
 }
 
-.copyright .info:hover .tooltip {
-  visibility: visible;
+/* Between 992px and 1200px */
+@media (max-width: 1200px) and (min-width: 992px)  {
+  section.about-cv-page .content-row .content-right{
+    max-height: 450px;
+    overflow: hidden;
+  }
+  section.about-cv-page .content-row .content-right img#profile-img{
+    max-width: 85%;
+  }
 }
 
 /* Medium-Large devices (tablets, 992px and down) */
@@ -384,6 +338,10 @@ section.about-cv-page .last-cv .cv-content-right img:hover {
   }
 
   section.about-cv-page .cv {
+    padding: 20px 20px 20px 30px;
+  }
+  section.about-cv-page #software-skill,
+  section.about-cv-page #libraries{
     padding: 20px;
   }
 
@@ -423,6 +381,10 @@ section.about-cv-page .last-cv .cv-content-right img:hover {
   }
 
   section.about-cv-page .cv {
+    padding: 15px 15px 15px 25px;
+  }
+  section.about-cv-page #software-skill,
+  section.about-cv-page #libraries{
     padding: 15px;
   }
 

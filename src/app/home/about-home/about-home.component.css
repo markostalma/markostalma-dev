@@ -1,62 +1,98 @@
 section.first-screen-home {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    background: #450468;
-    color: #11dae2;
-    outline: 10px solid #ffffff;
-    outline-offset: -10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: #450468;
+  color: #11dae2;
+  outline: 10px solid #ffffff;
+  outline-offset: -10px;
 }
-
 section.first-screen-home .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 60px 0px 60px 0px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 60px 0px 0px 0px;
 }
-
-section.first-screen-home .content-row #profile-img{
-    transition: all 0.3s ease-in-out;
+section.first-screen-home .content-row #profile-img {
+  transition: all 0.3s ease-in-out;
 }
-
 section.first-screen-home .content-row #profile-img:hover {
-    cursor: pointer;
-    cursor: url('../../../assets/img/cursor.png'), auto;
+  cursor: pointer;
+  cursor: url("../../../assets/img/cursor.png"), auto;
 }
-
-/* section.first-screen-home .content-row img.avatar {
-    display: none;
-} */
-
+section.first-screen-home .content-row img.avatar {
+  margin: 0 0 0 35px;
+  max-width: 350px;
+  display: inline-block;
+  border: 3px solid #11dae2;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  box-sizing: border-box;
+  display: none;
+}
 .first-screen-home .button-row {
-    text-align: right;
+  text-align: right;
 }
-
 section.first-screen-home .button-row .btn {
-    float: right;
-    margin: 50px 10px 0 0;
-    border-color: #11dae2;
-    color: #11dae2;
-
+  float: right;
+  margin: 50px 10px 0 0;
+  border-color: #11dae2;
+  color: #11dae2;
 }
-
 section.first-screen-home .button-row .btn:hover {
-    background: #11dae2;
-    color: #450468;
+  background: #11dae2;
+  color: #450468;
 }
-
-
+/* Medium devices (992px and down) */
+@media (max-width: 992px) {
+  section.first-screen-home .content-row img.avatar {
+    display: block;
+  }
+  section.first-screen-home .content-row #profile-img {
+    display: none;
+  }
+  section.first-screen-home .button-row {
+    text-align: center !important;
+  }
+  section.first-screen-home .button-row .btn {
+    margin: 20px 0;
+  }
+}
 /* Medium devices (tablets, 768px and down) */
-
 @media (max-width: 768px) {
-section.first-screen-home .button-row .btn {
+  section.first-screen-home .precontent-row {
+    margin-bottom: 30px;
+  }
+  section.first-screen-home .content-row .content-left {
+    flex: auto;
+    order: 2;
+    margin-top: 20px;
+  }
+  section.first-screen-home .content-row .content-right {
+    flex: auto;
+    order: 1;
+    text-align: center;
+  }
+  section.first-screen-home .content-row img.avatar {
+    margin: 0 auto;
+    max-width: 75%;
+  }
+  section.first-screen-home .button-row .btn {
     float: none;
     display: inline-block;
     margin: 20px 0 0 0;
   }
-  section.first-screen-home .button-row{
-      margin-top: 25px;
+  section.first-screen-home .button-row {
+    margin-top: 25px;
   }
   section.first-screen-home .container {
     padding: 60px 0px 60px 0px;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  section.first-screen-home .content-row img.avatar {
+    margin: 0 auto;
+    max-width: 220px;
   }
 }

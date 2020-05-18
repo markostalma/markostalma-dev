@@ -13,6 +13,7 @@ section.single-work .container {
 }
 
 section.single-work .container .work-single {
+    position: relative;
     width: 100%;
     border: 2px solid transparent;
     color: #ffffff;
@@ -99,69 +100,36 @@ section.single-work .container .next-prev a .arrow i {
     margin: auto;
 }
 
-/* Copyright */
-.copyright {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.copyright p{
-    font-size: 14px;
-}
-.copyright p span{
-    font-size: 20px;
-}
+/* Footer tooltip and Copyright */
 .copyright .info {
-    position: relative;
-    margin: 20px auto 10px auto;
-    border: 1px solid #11dae2;
-    border-radius: 50%;
-    display: inline-block;
-    width: 20px;
-    padding: 2px;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
+  border: 1px solid #11dae2;
 }
+
 .copyright .tooltip {
-    position: absolute;
-    visibility: hidden;
-    font-size: 12px;
-    width: 250px;
-    height: 25px;
-    background-color: #450468;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 7px;
-    bottom: 35px;
-    left: -115px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    vertical-align: middle;
+  background-color: #450468;
+  color: #ffffff;
 }
-.copyright .tooltip img.bug-icon {
-    display: inline-block;
-    width: 17px;
-    height: auto;
-    vertical-align: middle;
-}
+
 .copyright .info:hover {
-    cursor: pointer;
-    background-color: #11dae2;
-    color: #450468;
+  background-color: #11dae2;
+  color: #450468;
 }
-.copyright .info:hover .tooltip {
-    visibility: visible;
+
+/* Medium devices (992px and down) */
+@media (max-width: 992px) {
+  section.single-work .container .work-single .work-header,
+  section.single-work .container .work-single .work-img{
+      flex-basis: 100%;
+      text-align: center;
+      /* position: relative; */
+  }
+  section.single-work .container .work-single .work-tags{
+    position: absolute;
+    bottom: 5px;
+  }
+  section.single-work .container .work-single .work-img{
+    margin: 25px 0;
+  }
 }
 
 /* Medium devices (tablets, 768px and down) */
@@ -172,23 +140,17 @@ section.single-work .container .next-prev a .arrow i {
     section.single-work .container .heading-row{
         margin-bottom: 10px;
     }
-
     section.single-work .container .heading-row .page-heading{
         font-size: 25px;
         line-height: 1.6;
         margin-bottom: 0;
     }
-    section.single-work .container .work-single .work-header,
-    section.single-work .container .work-single .work-img{
-        flex-basis: 100%;
-        text-align: center;
-        position: relative;
+    section.single-work .container .work-single {
+      padding: 15px 25px;
     }
-    section.single-work .container .work-single .work-header .work-heading{
-        margin-bottom: 20px;
-    }
-    section.single-work .container .work-single .work-tags{
-        margin: 35px auto 15px auto;
+    section.single-work .container .work-single .work-txt{
+        text-align: left;
+        margin-top: 15px;
     }
     section.single-work .container .work-single .work-img{
         margin-top: 20px;

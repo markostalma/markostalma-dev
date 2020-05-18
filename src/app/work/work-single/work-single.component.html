@@ -21,18 +21,9 @@
         </div>
       </div>
       <!-- Slick Carousel -->
-      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"> 
-        <img ngxSlickItem *ngFor="let slide of slides" class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%; height: auto;"> 
-          <!-- <div  class="slide">
-            <img ngxSlickItem *ngFor="let slide of slides" class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%; height: auto;">
-          </div> -->
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"> <!--  [config]="slideConfig" -->
+        <img ngxSlickItem *ngFor="let slide of slides" class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%;">
       </ngx-slick-carousel>
-
-      <!-- Single work images -->
-      <!-- <div class="row preview-single" >
-        <img class="img-fluid work-preview-img {{item.title}}" [src]="item.img" alt="{{item.title}}" width="100%" height="auto">
-      </div> -->
-
       <!-- Txt about company -->
       <div class="row txt-single">
         <p>" {{ item.txt }} "</p>

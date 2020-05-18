@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit, OnDestroy, Inject } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
@@ -7,7 +7,6 @@ import { DOCUMENT } from '@angular/platform-browser';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
   isOpen = true;
 
   toggle() {
@@ -17,7 +16,7 @@ export class AboutComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit() {
-    this.document.body.classList.remove('home-page', 'work-page', 'single-work-page', 'process-page');
+    this.document.body.classList.remove('home-page', 'work-page', 'single-work-page', 'process-page', 'error-page');
     this.document.body.classList.add('about-page');
   }
 

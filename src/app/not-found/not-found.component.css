@@ -69,7 +69,7 @@ section.error-404-page #error-menu .button-row img{
     margin-left: 15px;
     opacity: 1;
     transition: all 0.2s ease-in;
-    
+
 }
 
 section.error-404-page .button-row a:hover img{
@@ -77,69 +77,19 @@ section.error-404-page .button-row a:hover img{
     display: none;
 }
 
-/* Copyright */
-.copyright {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.copyright p{
-    font-size: 14px;
-}
-.copyright p span{
-    font-size: 20px;
-}
+/* Footer tooltip and Copyright */
 .copyright .info {
-    position: relative;
-    margin: 20px auto 10px auto;
     border: 1px solid #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    width: 20px;
-    padding: 2px;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
 }
+
 .copyright .tooltip {
-    position: absolute;
-    visibility: hidden;
-    font-size: 12px;
-    width: 250px;
-    height: 25px;
     background-color: #fc6f19;
     color: #ffffff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 7px;
-    bottom: 35px;
-    left: -115px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    vertical-align: middle;
 }
-.copyright .tooltip img.bug-icon {
-    display: inline-block;
-    width: 17px;
-    height: auto;
-    vertical-align: middle;
-}
+
 .copyright .info:hover {
-    cursor: pointer;
     background-color: #ffffff;
     color: #fc6f19;
-}
-.copyright .info:hover .tooltip {
-    visibility: visible;
 }
 
 /* Only Large devices (tablets, 992px and up) */
@@ -164,13 +114,13 @@ section.error-404-page .button-row a:hover img{
     section.error-404-page .container{
         padding: 60px 0px 60px 0px;
     }
+    section.error-404-page .error{
+      margin: 10px 0;
+    }
     #error-id-desktop{
         display: none;
     }
 }
-
-/* Small devices (tablets, 576px and down) */
-@media (max-width: 576px) {}
 
 /* Extra Small devices (tablets, 480px and down) */
 @media (max-width: 480px) {
@@ -178,4 +128,14 @@ section.error-404-page .button-row a:hover img{
         width: 85%;
         margin: 10px auto;
     }
+}
+
+/* Extra Small devices (375px and down) */
+@media (max-width: 375px) {
+  section.error-404-page #error-menu .button-row a.btn.btn-with-img{
+    width: auto;
+  }
+  .btn-with-img img{
+    display: none;
+  }
 }

@@ -45,6 +45,7 @@ section.work-list-page .container .button-row #work-type-filter option {
 section.work-list-page .container a.single-work-link {
     flex-basis: 48.8%;
     text-decoration: none;
+    overflow: hidden;
 }
 
 section.work-list-page .button-row #load-more {
@@ -144,71 +145,20 @@ a.single-work-link:nth-child(even){
     left: 15%;
 }
 
-/* Copyright */
-.copyright {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.copyright p{
-    font-size: 14px;
-}
-.copyright p span{
-    font-size: 20px;
-}
+/* Footer tooltip and Copyright */
 .copyright .info {
-    position: relative;
-    margin: 20px auto 10px auto;
-    border: 1px solid #11dae2;
-    border-radius: 50%;
-    display: inline-block;
-    width: 20px;
-    padding: 2px;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-.copyright .tooltip {
-    position: absolute;
-    visibility: hidden;
-    font-size: 12px;
-    width: 250px;
-    height: 25px;
-    background-color: #450468;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 7px;
-    bottom: 35px;
-    left: -115px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    vertical-align: middle;
-}
-.copyright .tooltip img.bug-icon {
-    display: inline-block;
-    width: 17px;
-    height: auto;
-    vertical-align: middle;
-}
-.copyright .info:hover {
-    cursor: pointer;
-    background-color: #11dae2;
-    color: #450468;
-}
-.copyright .info:hover .tooltip {
-    visibility: visible;
+  border: 1px solid #11dae2;
 }
 
+.copyright .tooltip {
+  background-color: #450468;
+  color: #ffffff;
+}
+
+.copyright .info:hover {
+  background-color: #11dae2;
+  color: #450468;
+}
 
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {

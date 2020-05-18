@@ -93,6 +93,21 @@ section.fourth-screen-home .container form textarea {
     font-family: 'Raleway', sans-serif;
 }
 
+/* Footer tooltip and Copyright */
+.copyright .info {
+    border: 1px solid #450468;
+}
+
+.copyright .tooltip {
+    background-color: #450468;
+    color: #ffffff;
+}
+
+.copyright .info:hover {
+background-color: #450468;
+    color: #ffffff;
+}
+
 /* Mozilla Firefox 19+ */
 
 ::-moz-placeholder {
@@ -142,7 +157,7 @@ section.fourth-screen-home .container form textarea {
 }
 
 
-/* Mozila Firefox Browser  */
+/* Mozila Firefox Browser support  */
 @supports (-moz-appearance:none) {
     input::-moz-placeholder{
         line-height: 35px;
@@ -161,7 +176,7 @@ section.fourth-screen-home .container form textarea {
     }
 }
 
-/* Microsoft Edge Browser  */
+/* Microsoft Edge Browser support  */
 @supports (-ms-ime-align:auto) {
 
     section.fourth-screen-home .container form select{
@@ -170,78 +185,11 @@ section.fourth-screen-home .container form textarea {
         text-align-last:center;
         -ms-text-align-last: center;
     }
-
     textarea::-ms-input-placeholder{
         padding-top: 50px;
         line-height: 205px;
     }
 }
-
-/* Copyright */
-.copyright {
-    width: 100%;
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.copyright p{
-    font-size: 14px;
-}
-.copyright p span{
-    font-size: 20px;
-}
-.copyright .info {
-    position: relative;
-    margin: 20px auto 10px auto;
-    border: 1px solid #450468;
-    border-radius: 50%;
-    display: inline-block;
-    width: 20px;
-    padding: 2px;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-.copyright .tooltip {
-    position: absolute;
-    visibility: hidden;
-    font-size: 12px;
-    width: 250px;
-    height: 25px;
-    background-color: #450468;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 7px;
-    bottom: 35px;
-    left: -115px;
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    vertical-align: middle;
-}
-.copyright .tooltip img.bug-icon {
-    display: inline-block;
-    width: 17px;
-    height: auto;
-    vertical-align: middle;
-}
-.copyright .info:hover {
-    cursor: pointer;
-    background-color: #450468;
-    color: #ffffff;
-}
-.copyright .info:hover .tooltip {
-    visibility: visible;
-}
-
 
 /* Medium devices (landscape phones, 768px and down) */
 @media (max-width: 768px) {

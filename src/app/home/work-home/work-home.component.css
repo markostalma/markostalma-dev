@@ -20,7 +20,7 @@ section.second-screen-home .container .work {
     border: 2px solid #ffffff;
     border-radius: 0px;
     box-sizing: border-box;
-    transition: all .2s ease-out;
+    transition: all .3s ease-out;
 }
 
 section.second-screen-home .container .work-heading {
@@ -34,6 +34,7 @@ section.second-screen-home .container .work-icon {
 section.second-screen-home .container .work:hover{
     cursor: pointer;
     border-radius: 10px;
+    background-color: #fdb78c70;
 }
 
 section.second-screen-home .container .button-row {
@@ -63,7 +64,6 @@ section.second-screen-home .container .work:nth-last-child(4) .work-header .work
 
 section.second-screen-home .container .work-heading {
     text-align: center;
-    line-height: 1;
 }
 
 section.second-screen-home .container .work-icon {
@@ -76,6 +76,43 @@ section.second-screen-home .container .work-txt {
     text-align: center;
 }
 
+/* Extra Large devices (1400px and down) */
+@media (max-width: 1400px) {
+  section.second-screen-home .container .work-heading{
+    line-height: 1.8;
+  }
+}
+
+/* Large devices (1060px and down) */
+@media (max-width: 1060px) {
+  section.second-screen-home .container .work {
+    margin: 10px 5px;
+  }
+}
+
+/* Large devices (992px and down) */
+@media (max-width: 992px) {
+  section.second-screen-home .container .work{
+    display: flex;
+    flex-basis: 49%;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px 0px;
+    padding: 25px 15px;
+  }
+  section.second-screen-home .container .work .work-header .work-heading {
+    order: 1;
+  }
+  section.second-screen-home .container .work-icon,
+  section.second-screen-home .container .work-heading{
+      flex-basis: 100%;
+  }
+  section.second-screen-home .container .work-header {
+      margin-bottom: 0px;
+  }
+
+}
+
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
     section.second-screen-home .container{
@@ -85,8 +122,9 @@ section.second-screen-home .container .work-txt {
         margin-bottom: 5px;
     }
     section.second-screen-home .container .work{
-        flex-basis: 46%;
+        margin: 6px 0px;
     }
+
 }
 
 /* Small devices (landscape phones, 576px and down) */
@@ -101,9 +139,6 @@ section.second-screen-home .container .work-txt {
     section.second-screen-home .container .button-row{
         margin-top: 25px;
     }
-    section.second-screen-home .container .work-header {
-        margin-bottom: 10px;
-    }
     section.second-screen-home .container .work-heading{
         line-height: 2.1;
     }
@@ -116,10 +151,6 @@ section.second-screen-home .container .work-txt {
 @media (max-width: 480px) {
     section.second-screen-home .container .work-header {
         margin-bottom: 0px;
-    }
-    section.second-screen-home .container .work-icon,
-    section.second-screen-home .container .work-heading{
-        flex-basis: 100%;
     }
     section.second-screen-home .container .work-content .work-txt{
         margin-bottom: 5px;

@@ -48,17 +48,6 @@ export class HomeComponent implements OnInit {
             }
           }
       });
-          
-      // Hover profile img
-      $('#profile-img').hover(function () {
-          $(this).attr('src', '../../assets/img/about-me-me-hover.png').fadeIn();
-          $('#profile-img').css('filter', 'drop-shadow(0 0 5px #000)');
-          $('#profile-img').css('-webkit-filter', 'drop-shadow(0 0 5px #000)');
-      }, function () {
-          $(this).attr('src', '../../assets/img/about-me-me.png').fadeIn();
-          $('#profile-img').css('filter', 'none').fadeIn();
-          $('#profile-img').css('-webkit-filter', 'none').fadeIn();
-      });
 
     });
   }

@@ -33,8 +33,7 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
     private dataService: DataService,
     private activeRoute: ActivatedRoute,
     private router: Router
-  ) {  
-    $('.slick-list').css({ height: "auto" });
+  ) {
     this.configCarousel();
     this.items = dataService.loadItems();
     this.loadItems();
@@ -58,11 +57,11 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       this.slides = this.item.otherImg;
     });
   }
-  
+
 
   configCarousel(){
     this.slideConfig = {
-      "slidesToShow": 1, 
+      "slidesToShow": 1,
       "slidesToScroll": 1,
       "lazyLoad": "ondemand",
       "autoplay": true,
@@ -71,8 +70,25 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       "arrows": false,
       "dots": true,
       "dotsClass": "slick-dots custom-dots",
-      "infinite": true 
+      "infinite": true
     }
+  }
+
+  slickInit(slideConfig){
+    this.configCarousel();
+    slideConfig = {
+      "slidesToShow": 1,
+      "slidesToScroll": 1,
+      "lazyLoad": "ondemand",
+      "autoplay": true,
+      "adaptiveHeight": true,
+      "fade": true,
+      "arrows": false,
+      "dots": true,
+      "dotsClass": "slick-dots custom-dots",
+      "infinite": true
+    }
+    console.log("Slider init");
   }
 
 
@@ -118,18 +134,16 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   ngOnInit() {
     this.document.body.classList.remove('about-page', 'work-page', 'home-page', 'process-page', 'error-page');
     this.document.body.classList.add('single-work-page', this.item.type);
-    $('.slick-list').css({ height: "auto" });
   }
 
   ngDoCheck(){
     this.configCarousel();
-    $('.slick-list').css({ height: "auto" });
-    
+    // $('.slick-list').css({ height: "auto" });
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
     this.document.body.classList.remove(this.item.type);
   }
-  
+
 }

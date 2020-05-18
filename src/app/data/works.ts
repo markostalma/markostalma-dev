@@ -15,7 +15,7 @@ export class Items{
 }
 
 export const ITEMS: Items[] = [
-    {   
+    {
         "id": 1,
         "type": "graphic-design",
         "title": "GizmoSphere Infographic",
@@ -301,7 +301,7 @@ export const ITEMS: Items[] = [
         "type": "inteligent-system",
         "title": "Empty for now",
         "subtitle": "Empty for now ",
-        "slugname": "data-science",
+        "slugname": "mock-up",
         "tags": "data science, python, visualization, Jupyter notebook ",
         "shortDesc": "Exploatory visualization with python libraries like numpy, pandas and other from MySQL database ",
         "txt": "Images of that work",
