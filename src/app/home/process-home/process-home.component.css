@@ -31,7 +31,7 @@ section.third-screen-home .container .process-wrapper .process {
   flex-basis: 21%;
   border: 3px solid #fc6f19;
   border-radius: 100%;
-  margin: 10px 0 35px 10px;
+  margin: 10px 0 35px 0px;
   padding: 25px 25px 0 25px;
   box-sizing: border-box;
   min-height: 220px;
@@ -139,33 +139,44 @@ section.third-screen-home .container .last-row {
 section.third-screen-home .container .last-row .button-row,
 section.third-screen-home .container .last-row .last-process-row {
   flex-basis: 50%;
-}
-
-section.third-screen-home .container .last-row .button-row {
-  margin-top: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 section.third-screen-home .container .last-process-row {
-  display: flex;
+  position: relative;
   border: 3px solid #fc6f19;
+  background-color: transparent;
   border-radius: 7px;
-  align-items: center;
   padding: 15px;
+  -webkit-transition: background-color .3s ease-in;
+  -moz-transition: background-color .3s ease-in;
+  -o-transition: background-color .3s ease-in;
+  transition: background-color .3s ease-in;
 }
 
-section.third-screen-home .container .last-process-row .process-number {
-  margin-right: 150px;
+section.third-screen-home .container .last-process-row:hover{
+  background-color: #5d0d88bd;
+}
+
+section.third-screen-home .container .last-process-row:hover .process-no{
+  background-color: #fc6f19;
+  color: #450468;
+  font-weight: 600;
 }
 
 section.third-screen-home .container .last-process-row .process-number .process-no {
+  position: absolute;
   border: 2px solid #fc6f19;
-  border-radius: 0%;
-  padding: 8px 10px 10px 10px;
-  width: 25px;
-  height: 25px;
+  border-radius: 15%;
+  padding: 4px;
+  width: 35px;
+  height: 35px;
   font-size: 16px;
-  position: relative;
-  bottom: 0;
+  left: 10px;
+  bottom: 35px;
 }
 
 section.third-screen-home .container .last-process-row .process-content {
@@ -228,8 +239,9 @@ section.third-screen-home .container .button-row .btn:hover {
 @media (max-width: 820px) {
   section.third-screen-home .container .process-wrapper .process{
     flex-basis: 45%;
-    min-height: 280px;
+    min-height: 300px;
   }
+
   section.third-screen-home .container .process-header .process-icon {
     margin: 50px auto 15px auto;
     height: 45px;
@@ -244,7 +256,7 @@ section.third-screen-home .container .button-row .btn:hover {
     order: 2;
     text-align: center;
     flex-basis: 100%;
-    margin-bottom: 25px;
+    margin: 45px 0 25px 0;
   }
   section.third-screen-home .container .last-row .last-process-row {
     flex-basis: 100%;
@@ -258,13 +270,13 @@ section.third-screen-home .container .button-row .btn:hover {
   }
 }
 
-
 /* Medium devices (tablets, 768px and down) */
 @media (max-width: 768px) {
   section.third-screen-home .container {
     padding: 30px 0;
   }
   section.third-screen-home .container .process-wrapper .process{
+    flex-basis: 46%;
     min-height: 250px;
   }
   section.third-screen-home .container .process-header .process-icon {
@@ -276,7 +288,6 @@ section.third-screen-home .container .button-row .btn:hover {
   }
 
 }
-
 
 /* Small devices (phones, 576px and down) */
 @media (max-width: 576px) {
@@ -300,15 +311,19 @@ section.third-screen-home .container .button-row .btn:hover {
   }
 }
 
+/* Extra-Small devices (340px and down) */
+@media (max-width: 340px) {
+  section.third-screen-home .container .last-row .last-process-row {
+    align-items: flex-end;
+  }
+}
+
 /* Extra-Small devices (old phones, 300px and down) */
 @media (max-width: 300px) {
-  section.third-screen-home .container .process {
-    max-width: 180px;
-    min-height: 180px;
-  }
   section.third-screen-home .container .process-wrapper .process {
-    min-width: 200px;
-    min-height: 200px;
+    max-width: 180px;
+    min-width: 100%;
+    min-height: 180px;
   }
   section.third-screen-home .container .process-header .process-icon {
     margin: 25px auto 15px auto;
@@ -316,5 +331,9 @@ section.third-screen-home .container .button-row .btn:hover {
   }
   section.third-screen-home .container .process-content h4.process-heading {
     font-size: 15px;
+  }
+  section.third-screen-home .container .last-process-row img.process-icon{
+    margin: 7px 0 0 5px;
+    height: 45px;
   }
 }

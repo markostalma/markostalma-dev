@@ -89,10 +89,20 @@ section.first-screen-home .button-row .btn:hover {
     padding: 60px 0px 60px 0px;
   }
 }
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
   section.first-screen-home .content-row img.avatar {
     margin: 0 auto;
     max-width: 220px;
+  }
+}
+
+/* Extra Small devices (480px and down) */
+@media (max-width: 480px) {
+  section.first-screen-home .content-row{
+    width: 100%;
+  }
+  section.first-screen-home .content-row img.avatar {
+    max-width: 100%;
   }
 }

@@ -14,8 +14,8 @@ section.second-screen-home .container {
 }
 
 section.second-screen-home .container .work {
-    flex-basis: 48%;
-    margin: 10px;
+    flex-basis: 49%;
+    margin: 10px 0;
     padding: 10px 25px;
     border: 2px solid #ffffff;
     border-radius: 0px;
@@ -40,8 +40,7 @@ section.second-screen-home .container .work:hover{
 section.second-screen-home .container .button-row {
     width: 100%;
     text-align: center;
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
 }
 
 section.second-screen-home .container .button-row .btn {
@@ -84,20 +83,18 @@ section.second-screen-home .container .work-txt {
 }
 
 /* Large devices (1060px and down) */
-@media (max-width: 1060px) {
+/* @media (max-width: 1060px) {
   section.second-screen-home .container .work {
     margin: 10px 5px;
   }
-}
+} */
 
 /* Large devices (992px and down) */
 @media (max-width: 992px) {
   section.second-screen-home .container .work{
     display: flex;
-    flex-basis: 49%;
     justify-content: center;
     flex-direction: column;
-    margin: 10px 0px;
     padding: 25px 15px;
   }
   section.second-screen-home .container .work .work-header .work-heading {

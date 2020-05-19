@@ -78,6 +78,7 @@ html,
 body {
   overflow-x: hidden;
   font-family: 'Raleway', sans-serif;
+  cursor: default;
 }
 
 html {
@@ -645,6 +646,11 @@ section .button-row .btn:hover {
   }
 }
 
+
+.home-page section{
+  display: flex;
+}
+
 /*===============================================
   Responsive Design - Bootstrap 4 media queries
 ===============================================*/
@@ -669,7 +675,7 @@ section .button-row .btn:hover {
   }
 
   .home-page section {
-    padding: 8% 30px 40px 30px;
+    padding: 8% 30px 8% 30px;
     height: 100vh;
     overflow: hidden;
   }
@@ -747,7 +753,7 @@ section .button-row .btn:hover {
   }
 
   .home-page section {
-    padding: 5% 30px 30px 30px;
+    padding: 5% 30px 5% 30px;
     min-height: 100vh;
   }
 
@@ -852,6 +858,7 @@ section .button-row .btn:hover {
   .copyright .tooltip {
     height: 28px !important;
   }
+
 }
 /* Small devices (576px and down) */
 @media (max-width: 576px) {
@@ -866,6 +873,12 @@ section .button-row .btn:hover {
     width: 80px;
     font-size: 10px;
     right: 0;
+  }
+  section {
+    padding: 20px;
+  }
+  header nav ul.language-bar{
+    right: 15px;
   }
 }
 
