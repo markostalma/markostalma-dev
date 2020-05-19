@@ -238,7 +238,7 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 15,
-        "type": "inteligent-system",
+        "type": "intelligent-system",
         "title": "Scrapy Web Crawler",
         "subtitle": "Scrapy Web Crawler to get Data for ML task",
         "slugname": "scrapy-crawler",
@@ -253,7 +253,7 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 16,
-        "type": "inteligent-system",
+        "type": "intelligent-system",
         "title": "Questionnaire",
         "subtitle": "Questionnaire to get data for research",
         "slugname": "amd-infographic",
@@ -268,7 +268,7 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 17,
-        "type": "inteligent-system",
+        "type": "intelligent-system",
         "title": "Expert System GUI",
         "subtitle": "Expert System test version in Java, jSwing and jFuzzyLogic libraries",
         "slugname": "es-gui-in-java",
@@ -283,7 +283,7 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 18,
-        "type": "inteligent-system",
+        "type": "intelligent-system",
         "title": "Data Science project",
         "subtitle": "Some visualization ",
         "slugname": "data-science",
@@ -298,7 +298,7 @@ export const ITEMS: Items[] = [
     },
     {
         "id": 19,
-        "type": "inteligent-system",
+        "type": "intelligent-system",
         "title": "Empty for now",
         "subtitle": "Empty for now ",
         "slugname": "mock-up",

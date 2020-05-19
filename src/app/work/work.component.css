@@ -81,28 +81,28 @@ a.single-work-link:nth-child(even){
     padding: 25px 35px 0 35px;
     box-sizing: border-box;
     margin-bottom: 25px;
-    border-color: #00ffff;
     transition: all .4s ease-in-out;
-    -webkit-transition: .4s ease-in-out;
-    -moz-transition: .4s ease-in-out;
-    -o-transition: .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all.4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
     min-height: 400px;
 }
 
 .work-preview.graphic-design {
-    background-color: rgba(0, 220, 220, 0.5);
+    background-color: rgba(0, 220, 220, 0.45);
 }
 
 .work-preview.web-design {
     background-color: rgba(165, 130, 180, 0.5);
+    background-color: #5d0d88bd;
 }
 
 .work-preview.web-development {
-    background-color: rgba(160, 30, 55, 0.5);
+    background-color: rgba(160, 30, 55, 0.3);
 }
 
 .work-preview.intelligent-system {
-    background-color: rgba(220, 120, 0, 0.5);
+    background-color: rgba(220, 120, 0, 0.3);
 }
 
 .work-preview.photography {
@@ -112,6 +112,10 @@ a.single-work-link:nth-child(even){
 .work-preview:hover {
     background-color: rgba(0, 220, 220, 1);
     color: #450468;
+}
+
+.work-preview:hover img.work-preview-img {
+  filter: drop-shadow(rgb(0, 0, 0) 0px 0px 10px);
 }
 
 .work-preview .work-header {
@@ -143,6 +147,10 @@ a.single-work-link:nth-child(even){
     position: absolute;
     top: 45px;
     left: 15%;
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all.25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
 }
 
 /* Footer tooltip and Copyright */

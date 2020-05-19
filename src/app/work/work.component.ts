@@ -18,7 +18,7 @@ export class WorkComponent implements OnInit {
   selectedType = "0";
 
   constructor(
-    @Inject(DOCUMENT) private document: Document, 
+    @Inject(DOCUMENT) private document: Document,
     private dataService: DataService,
     private router: Router
   ) { }
@@ -54,7 +54,7 @@ export class WorkComponent implements OnInit {
     console.log('Counter Load More: ' + this.counter);
     console.log('Length on load more: ' + this.items.length);
   }
-  
+
   // Filter Works Categories
   changeFilter() {
     this.counter = 4;
@@ -79,7 +79,7 @@ export class WorkComponent implements OnInit {
     this.document.body.classList.remove('about-page', 'home-page', 'single-work-page', 'process-page', 'error-page');
     this.document.body.classList.add('work-page');
     this.loadItems();
-    this.changeFilter();
+    // this.changeFilter();
   }
 
   ngOnDestroy() {

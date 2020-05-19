@@ -366,6 +366,10 @@ header nav ul.language-bar li.srb a:hover .language-tooltip {
 
 #social-menu span a img {
   opacity: 0.5;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 #social-menu span a img:hover {
@@ -394,6 +398,10 @@ header nav ul.language-bar li.srb a:hover .language-tooltip {
   border: 1px solid transparent;
   margin: 20px 0;
   opacity: 0.5;
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
 }
 
 #navigation-menu span:before {
