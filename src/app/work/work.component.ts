@@ -14,7 +14,7 @@ import { DataService } from '../services/data.service';
 
 export class WorkComponent implements OnInit {
   items: Items[];
-  counter: number = 4;
+  counter: number = 6;
   selectedType = "0";
 
   constructor(
@@ -25,7 +25,7 @@ export class WorkComponent implements OnInit {
 
   // Load Works Items
   loadItems(){
-    if(this.counter <= 4 ){
+    if(this.counter <= 6 ){
       this.items = this.dataService.loadItems().slice(0, this.counter);
     }
   }
@@ -57,9 +57,9 @@ export class WorkComponent implements OnInit {
 
   // Filter Works Categories
   changeFilter() {
-    this.counter = 4;
+    this.counter = 6;
     if (this.selectedType === "0" && this.counter <= 20){
-      this.items = this.dataService.loadItems().slice(0, 4);
+      this.items = this.dataService.loadItems().slice(0, 6);
     } else{
       this.items = this.dataService.loadItems().filter((workType) => workType.type == this.selectedType).slice(0, this.counter);
     }

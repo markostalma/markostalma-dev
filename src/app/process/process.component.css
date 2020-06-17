@@ -191,6 +191,20 @@ section.process-detailed-page .copyright p {
   }
 }
 
+/* Extra Small devices (330px and down) */
+@media (max-width: 330px) {
+  section.process-detailed-page .container .process-content .process-img img{
+    width: 80px;
+  }
+  section.process-detailed-page .container .process-content #process-four .process-img img,
+  section.process-detailed-page .container .process-content #process-five .process-img img{
+    width: 60px;
+  }
+  section.process-detailed-page .container .process-content .process-img h3{
+    font-size: 19px;
+  }
+}
+
 section.process-detailed-page .container .process-content .process-img:hover{
   border-radius: 10px;
   background-color: #5d0d88bd;
