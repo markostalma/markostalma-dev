@@ -1,9 +1,10 @@
-import { Component, OnInit, Inject, OnDestroy, OnChanges } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, OnChanges, DoCheck, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Items } from '../../data/works';
 import { DataService } from '../../services/data.service';
 import $ from 'jquery';
+import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'markostalma-work-single',
@@ -12,10 +13,11 @@ import $ from 'jquery';
   providers: [ DataService ]
 })
 
-export class WorkSingleComponent implements OnInit, OnDestroy {
+export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   items: Items[];
   private item: any = [];
   sliderItem: any = [];
+  slides: any = [];
   private nextPrevious: any = [];
   private slugname: string;
   private nextEnable: boolean = true;
@@ -24,31 +26,67 @@ export class WorkSingleComponent implements OnInit, OnDestroy {
   private sub: any;
   slideConfig = {};
 
+  @ViewChild('slickModal') slickModal: SlickCarouselComponent;
+
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private dataService: DataService,
     private activeRoute: ActivatedRoute,
     private router: Router
-  ) {this.items = this.dataService.loadItems()}
+  ) {
+    this.configCarousel();
+    this.items = dataService.loadItems();
+    this.loadItems();
+    this.loadSliderImage();
+  }
 
 
   // Load Single Work
   loadItems(){
     this.sub = this.activeRoute.params.subscribe(params => {
-      this.sliderItem = [];
       this.slugname = params['slugname'];
-      this.item = this.dataService.loadItems().find( (data) => data.slugname == this.slugname);
-      this.sliderItem.push(this.item['otherImg'])
-      console.log(this.sliderItem);
-      this.configCarousel();
+      this.item = this.dataService.loadItems().find( (data) => data.slugname == this.slugname );
+      this.sliderItem.push(this.item.otherImg);
     });
-
   }
+
+  // Load Slider Image
+  loadSliderImage(){
+    this.slides = this.item.otherImg;
+    this.router.events.subscribe(() => {
+      this.slides = this.item.otherImg;
+    });
+  }
+
 
   configCarousel(){
     this.slideConfig = {
       "slidesToShow": 1,
       "slidesToScroll": 1,
+      "lazyLoad": "ondemand",
+      "autoplay": true,
+      "adaptiveHeight": true,
+      "fade": true,
+      "arrows": false,
+      "dots": true,
+      "dotsClass": "slick-dots custom-dots",
+      "infinite": true
+    }
+  }
+
+  slickInit(slideEvent) {
+    console.log(
+      slideEvent.slick.$slider.find('img')
+        .first()
+        .on('load', function () {
+          $(window).trigger('resize');
+        })
+    );
+    this.configCarousel();
+    slideEvent = {
+      "slidesToShow": 1,
+      "slidesToScroll": 1,
+      "lazyLoad": "ondemand",
       "autoplay": true,
       "adaptiveHeight": true,
       "fade": true,
@@ -77,7 +115,6 @@ export class WorkSingleComponent implements OnInit, OnDestroy {
       this.nextEnable = false;
     }
   }
-
   // Go to previous work
   goPrevious(){
     this.nextPreviousId = this.item.id - 1;
@@ -95,27 +132,23 @@ export class WorkSingleComponent implements OnInit, OnDestroy {
       this.prevEnable = false;
     }
   }
-
   // Go to selected works page
   goBack() {
     this.router.navigate(['/selected-works']);
-    this.sliderItem = [];
   }
 
   ngOnInit() {
     this.document.body.classList.remove('about-page', 'work-page', 'home-page', 'process-page', 'error-page');
     this.document.body.classList.add('single-work-page', this.item.type);
-    this.loadItems();
   }
 
-  ngOnChanges(){
-    this.sliderItem = [];
-    this.sub.unsubscribe();
+  ngDoCheck(){
+    this.configCarousel();
+    // $('.slick-list').css({ height: "auto" });
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
-    this.sliderItem = [];
     this.document.body.classList.remove(this.item.type);
   }
 
