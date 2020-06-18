@@ -75,11 +75,13 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   slickInit(slideEvent) {
-    slideEvent.slick.$slider.find('img')
-      .first()
-      .on('load', function () {
-        $(window).trigger('resize');
-      });
+    console.log(
+      slideEvent.slick.$slider.find('img')
+        .first()
+        .on('load', function () {
+          $(window).trigger('resize');
+        })
+    );
     this.configCarousel();
     slideEvent = {
       "slidesToShow": 1,
