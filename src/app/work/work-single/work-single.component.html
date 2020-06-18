@@ -21,9 +21,16 @@
         </div>
       </div>
       <!-- Slick Carousel -->
-      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"> <!--  [config]="slideConfig" -->
-        <img ngxSlickItem *ngFor="let slide of slides" class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%;">
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"> <!--  [config]="slideConfig" -->
+        <img ngxSlickItem *ngFor="let img of item.otherImg" class="img-fluid work-preview-img {{item.title}}" [src]="img.img" alt="{{item.title}}" style="width:100%;">
       </ngx-slick-carousel>
+
+      <div *ngFor="let slide of sliderItem">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"> <!--  [config]="slideConfig" -->
+          <img ngxSlickItem class="img-fluid work-preview-img {{item.title}}" [src]="slide.img" alt="{{item.title}}" style="width:100%;">
+        </ngx-slick-carousel>
+      </div>
+
       <!-- Txt about company -->
       <div class="row txt-single">
         <p>" {{ item.txt }} "</p>

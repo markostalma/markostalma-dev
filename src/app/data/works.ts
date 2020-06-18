@@ -57,7 +57,7 @@ export const ITEMS: Items[] = [
         "headingImg": "../assets/img/works/nbg-leasing-posters-heading.png",
         "link": "",
         "otherImg": [
-            {"img": "../assets/img/works/nbg-leasing-posters-1.jpg"},
+            {"img": "assets/img/works/nbg-leasing-posters-1.jpg"},
             {"img": "../assets/img/works/nbg-leasing-posters-2.jpg"},
             {"img": "../assets/img/works/nbg-leasing-posters-3.jpg"},
             {"img": "../assets/img/works/nbg-leasing-posters-4.jpg"},

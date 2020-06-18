@@ -1,10 +1,9 @@
-import { Component, OnInit, Inject, OnDestroy, OnChanges, DoCheck, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, OnChanges } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Items } from '../../data/works';
 import { DataService } from '../../services/data.service';
 import $ from 'jquery';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'markostalma-work-single',
@@ -13,11 +12,10 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   providers: [ DataService ]
 })
 
-export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
+export class WorkSingleComponent implements OnInit, OnDestroy {
   items: Items[];
   private item: any = [];
   sliderItem: any = [];
-  slides: any = [];
   private nextPrevious: any = [];
   private slugname: string;
   private nextEnable: boolean = true;
@@ -26,44 +24,31 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   private sub: any;
   slideConfig = {};
 
-  @ViewChild('slickModal') slickModal: SlickCarouselComponent;
-
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private dataService: DataService,
     private activeRoute: ActivatedRoute,
     private router: Router
-  ) {
-    this.configCarousel();
-    this.items = dataService.loadItems();
-    this.loadItems();
-    this.loadSliderImage();
-  }
+  ) {this.items = this.dataService.loadItems()}
 
 
   // Load Single Work
   loadItems(){
     this.sub = this.activeRoute.params.subscribe(params => {
+      this.sliderItem = [];
       this.slugname = params['slugname'];
-      this.item = this.dataService.loadItems().find( (data) => data.slugname == this.slugname );
-      this.sliderItem.push(this.item.otherImg);
+      this.item = this.dataService.loadItems().find( (data) => data.slugname == this.slugname);
+      this.sliderItem.push(this.item['otherImg'])
+      console.log(this.sliderItem);
+      this.configCarousel();
     });
-  }
 
-  // Load Slider Image
-  loadSliderImage(){
-    this.slides = this.item.otherImg;
-    this.router.events.subscribe(() => {
-      this.slides = this.item.otherImg;
-    });
   }
-
 
   configCarousel(){
     this.slideConfig = {
       "slidesToShow": 1,
       "slidesToScroll": 1,
-      "lazyLoad": "ondemand",
       "autoplay": true,
       "adaptiveHeight": true,
       "fade": true,
@@ -72,23 +57,6 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       "dotsClass": "slick-dots custom-dots",
       "infinite": true
     }
-  }
-
-  slickInit(slideConfig){
-    this.configCarousel();
-    slideConfig = {
-      "slidesToShow": 1,
-      "slidesToScroll": 1,
-      "lazyLoad": "ondemand",
-      "autoplay": true,
-      "adaptiveHeight": true,
-      "fade": true,
-      "arrows": false,
-      "dots": true,
-      "dotsClass": "slick-dots custom-dots",
-      "infinite": true
-    }
-    console.log("Slider init");
   }
 
 
@@ -109,6 +77,7 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       this.nextEnable = false;
     }
   }
+
   // Go to previous work
   goPrevious(){
     this.nextPreviousId = this.item.id - 1;
@@ -126,23 +95,27 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       this.prevEnable = false;
     }
   }
+
   // Go to selected works page
   goBack() {
     this.router.navigate(['/selected-works']);
+    this.sliderItem = [];
   }
 
   ngOnInit() {
     this.document.body.classList.remove('about-page', 'work-page', 'home-page', 'process-page', 'error-page');
     this.document.body.classList.add('single-work-page', this.item.type);
+    this.loadItems();
   }
 
-  ngDoCheck(){
-    this.configCarousel();
-    // $('.slick-list').css({ height: "auto" });
+  ngOnChanges(){
+    this.sliderItem = [];
+    this.sub.unsubscribe();
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+    this.sliderItem = [];
     this.document.body.classList.remove(this.item.type);
   }
 

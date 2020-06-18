@@ -1,6 +1,3 @@
-/*
-* Loader
-*/
 .lds-ripple {
   display: inline-block;
   position: relative;
@@ -475,6 +472,11 @@ section .precontent-row {
 
 /* .slick-list{
   height: auto!important;
+} */
+
+/* .slick-slider .slick-track,
+.slick-slider .slick-list {
+  height: 100%;
 } */
 
 
