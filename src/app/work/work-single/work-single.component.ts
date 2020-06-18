@@ -74,9 +74,14 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
     }
   }
 
-  slickInit(slideConfig){
+  slickInit(slideEvent) {
+    slideEvent.slick.$slider.find('img')
+      .first()
+      .on('load', function () {
+        $(window).trigger('resize');
+      });
     this.configCarousel();
-    slideConfig = {
+    slideEvent = {
       "slidesToShow": 1,
       "slidesToScroll": 1,
       "lazyLoad": "ondemand",
@@ -88,7 +93,6 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       "dotsClass": "slick-dots custom-dots",
       "infinite": true
     }
-    console.log("Slider init");
   }
 
 
