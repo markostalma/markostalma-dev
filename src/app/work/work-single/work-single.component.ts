@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, OnDestroy, OnChanges, DoCheck, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy, DoCheck, ViewChild } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Items } from '../../data/works';
@@ -24,7 +24,7 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   private prevEnable: boolean = true;
   private nextPreviousId: number;
   private sub: any;
-  slideConfig = {};
+  // slideConfig = {};
 
   @ViewChild('slickModal') slickModal: SlickCarouselComponent;
 
@@ -34,7 +34,7 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {
-    this.configCarousel();
+    // this.configCarousel();
     this.items = dataService.loadItems();
     this.loadItems();
     this.loadSliderImage();
@@ -58,21 +58,34 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
     });
   }
 
-
-  configCarousel(){
-    this.slideConfig = {
-      "slidesToShow": 1,
-      "slidesToScroll": 1,
-      "lazyLoad": "ondemand",
-      "autoplay": true,
-      "adaptiveHeight": true,
-      "fade": true,
-      "arrows": false,
-      "dots": true,
-      "dotsClass": "slick-dots custom-dots",
-      "infinite": true
-    }
+  slideConfig = {
+    "slidesToShow": 1,
+    "slidesToScroll": 1,
+    "lazyLoad": "ondemand",
+    "autoplay": true,
+    "adaptiveHeight": true,
+    "fade": true,
+    "arrows": false,
+    "dots": true,
+    "dotsClass": "slick-dots custom-dots",
+    "infinite": true
   }
+
+
+  // configCarousel(){
+  //   this.slideConfig = {
+  //     "slidesToShow": 1,
+  //     "slidesToScroll": 1,
+  //     "lazyLoad": "ondemand",
+  //     "autoplay": true,
+  //     "adaptiveHeight": true,
+  //     "fade": true,
+  //     "arrows": false,
+  //     "dots": true,
+  //     "dotsClass": "slick-dots custom-dots",
+  //     "infinite": true
+  //   }
+  // }
 
   slickInit(slideEvent) {
     console.log(
@@ -82,7 +95,8 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
           $(window).trigger('resize');
         })
     );
-    this.configCarousel();
+    this.slideConfig;
+    // this.configCarousel();
     slideEvent = {
       "slidesToShow": 1,
       "slidesToScroll": 1,
@@ -143,7 +157,7 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   ngDoCheck(){
-    this.configCarousel();
+    // this.configCarousel();
     // $('.slick-list').css({ height: "auto" });
   }
 

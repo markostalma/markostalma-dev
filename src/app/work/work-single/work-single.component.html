@@ -21,7 +21,7 @@
         </div>
       </div>
       <!-- Slick Carousel -->
-      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"> <!--  [config]="slideConfig" -->
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event);"> <!--  [config]="slideConfig" -->
         <img ngxSlickItem *ngFor="let img of item.otherImg" class="img-fluid work-preview-img {{item.title}}" [src]="img.img" alt="{{item.title}}" style="width:100%;">
       </ngx-slick-carousel>
 
