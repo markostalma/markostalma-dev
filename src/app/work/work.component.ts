@@ -21,7 +21,9 @@ export class WorkComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document,
     private dataService: DataService,
     private router: Router
-  ) { }
+  ) {
+    this.loadItems();
+   }
 
   // Load Works Items
   loadItems(){
@@ -78,7 +80,6 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
     this.document.body.classList.remove('about-page', 'home-page', 'single-work-page', 'process-page', 'error-page');
     this.document.body.classList.add('work-page');
-    this.loadItems();
     // this.changeFilter();
   }
 

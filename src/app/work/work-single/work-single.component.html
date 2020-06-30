@@ -23,8 +23,8 @@
 
       <!-- Slick Carousel -->
       <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event);">
-        <div *ngFor="let slickImg of item.otherImg" class="slide">
-          <img ngxSlickItem class="img-fluid work-preview-img slickImg-item {{item.title}}" [src]="slickImg.img" alt="{{item.title}}" style="width:100%;">
+        <div ngxSlickItem *ngFor="let slickImg of item.otherImg" class="slide">
+          <img class="img-fluid work-preview-img slickImg-item {{item.title}}" [src]="slickImg.img" alt="{{item.title}}" style="width:100%;">
         </div>
       </ngx-slick-carousel>
 

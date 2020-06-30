@@ -22,7 +22,6 @@ export class WorkSingleComponent implements OnInit, OnDestroy {
   private prevEnable: boolean = true;
   private nextPreviousId: number;
   private sub: any;
-  // slideConfig = {};
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -55,24 +54,13 @@ export class WorkSingleComponent implements OnInit, OnDestroy {
     "infinite": true
   }
 
-  // Options on slider init
+  // Fix slider adaptive height bug on init
   slickInit(slideEvent) {
-    slideEvent.slick.$slider.find('img').first().on('init', () => {
-      $(window).trigger('resize');
+    slideEvent.slick.$slider.find('img').first().on('load', () => {
+      let height = $('.slickImg-item').height();
+      $('.slick-list').height(height);
+      console.log("Slider Init");
     });
-    slideEvent = {
-      "slidesToShow": 1,
-      "slidesToScroll": 1,
-      "lazyLoad": "ondemand",
-      "autoplay": true,
-      "adaptiveHeight": true,
-      "fade": true,
-      "arrows": false,
-      "dots": true,
-      "dotsClass": "slick-dots custom-dots",
-      "infinite": true
-    }
-    console.log("Slider Init");
   }
 
   // Go to next work

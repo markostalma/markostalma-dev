@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouteAnimationsComponent } from './route-animations.component';
@@ -19,17 +20,15 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { WorkSingleComponent } from './work/work-single/work-single.component';
 
-import { SlickCarouselModule } from 'ngx-slick-carousel';
-
 @NgModule({
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    SlickCarouselModule,
     FormsModule,
     ReactiveFormsModule ,
     AppRoutingModule,
-    HttpClientModule,
-    SlickCarouselModule
+    HttpClientModule
   ],
   declarations: [
     RouteAnimationsComponent,
