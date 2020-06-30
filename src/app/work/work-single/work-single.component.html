@@ -20,9 +20,12 @@
           <img class="img-fluid work-preview-img" [src]="item.headingImg" alt="{{item.title}}">
         </div>
       </div>
+
       <!-- Slick Carousel -->
-      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event);"> <!--  [config]="slideConfig" -->
-        <img ngxSlickItem *ngFor="let img of item.otherImg" class="img-fluid work-preview-img {{item.title}}" [src]="img.img" alt="{{item.title}}" style="width:100%;">
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event);">
+        <div *ngFor="let slickImg of item.otherImg" class="slide">
+          <img ngxSlickItem class="img-fluid work-preview-img slickImg-item {{item.title}}" [src]="slickImg.img" alt="{{item.title}}" style="width:100%;">
+        </div>
       </ngx-slick-carousel>
 
       <!-- Txt about company -->

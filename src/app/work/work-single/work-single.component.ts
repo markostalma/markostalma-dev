@@ -1,10 +1,10 @@
-import { Component, OnInit, Inject, OnDestroy, DoCheck, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Items } from '../../data/works';
 import { DataService } from '../../services/data.service';
 import $ from 'jquery';
-import { SlickCarouselComponent } from 'ngx-slick-carousel';
+// import { SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
   selector: 'markostalma-work-single',
@@ -13,11 +13,9 @@ import { SlickCarouselComponent } from 'ngx-slick-carousel';
   providers: [ DataService ]
 })
 
-export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
+export class WorkSingleComponent implements OnInit, OnDestroy {
   items: Items[];
   private item: any = [];
-  sliderItem: any = [];
-  slides: any = [];
   private nextPrevious: any = [];
   private slugname: string;
   private nextEnable: boolean = true;
@@ -26,38 +24,24 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   private sub: any;
   // slideConfig = {};
 
-  @ViewChild('slickModal') slickModal: SlickCarouselComponent;
-
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private dataService: DataService,
     private activeRoute: ActivatedRoute,
     private router: Router
   ) {
-    // this.configCarousel();
     this.items = dataService.loadItems();
-    this.loadItems();
-    this.loadSliderImage();
   }
 
-
   // Load Single Work
-  loadItems(){
+  loadSingleItems(){
     this.sub = this.activeRoute.params.subscribe(params => {
       this.slugname = params['slugname'];
       this.item = this.dataService.loadItems().find( (data) => data.slugname == this.slugname );
-      this.sliderItem.push(this.item.otherImg);
     });
   }
 
-  // Load Slider Image
-  loadSliderImage(){
-    this.slides = this.item.otherImg;
-    this.router.events.subscribe(() => {
-      this.slides = this.item.otherImg;
-    });
-  }
-
+  // Slick slider config
   slideConfig = {
     "slidesToShow": 1,
     "slidesToScroll": 1,
@@ -71,32 +55,11 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
     "infinite": true
   }
 
-
-  // configCarousel(){
-  //   this.slideConfig = {
-  //     "slidesToShow": 1,
-  //     "slidesToScroll": 1,
-  //     "lazyLoad": "ondemand",
-  //     "autoplay": true,
-  //     "adaptiveHeight": true,
-  //     "fade": true,
-  //     "arrows": false,
-  //     "dots": true,
-  //     "dotsClass": "slick-dots custom-dots",
-  //     "infinite": true
-  //   }
-  // }
-
+  // Options on slider init
   slickInit(slideEvent) {
-    console.log(
-      slideEvent.slick.$slider.find('img')
-        .first()
-        .on('load', function () {
-          $(window).trigger('resize');
-        })
-    );
-    this.slideConfig;
-    // this.configCarousel();
+    slideEvent.slick.$slider.find('img').first().on('init', () => {
+      $(window).trigger('resize');
+    });
     slideEvent = {
       "slidesToShow": 1,
       "slidesToScroll": 1,
@@ -109,8 +72,8 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
       "dotsClass": "slick-dots custom-dots",
       "infinite": true
     }
+    console.log("Slider Init");
   }
-
 
   // Go to next work
   goNext(){
@@ -152,13 +115,9 @@ export class WorkSingleComponent implements OnInit, OnDestroy, DoCheck {
   }
 
   ngOnInit() {
+    this.loadSingleItems();
     this.document.body.classList.remove('about-page', 'work-page', 'home-page', 'process-page', 'error-page');
     this.document.body.classList.add('single-work-page', this.item.type);
-  }
-
-  ngDoCheck(){
-    // this.configCarousel();
-    // $('.slick-list').css({ height: "auto" });
   }
 
   ngOnDestroy() {
